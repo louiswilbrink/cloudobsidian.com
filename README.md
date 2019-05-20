@@ -14,6 +14,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+Once the files are built and saved to `dist/`, find the `index.html` file and update the `<base href` value to `cloud-obsidian`.
+
+## Deployment
+
+Upload all production files to `https://s3.console.aws.amazon.com/s3/buckets/cloud-obsidian` and ensure the permissions are set to `public`.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
