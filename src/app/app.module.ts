@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { InfographicComponent } from './infographic/infographic.component';
+import { LogoComponent } from './hero/logo/logo.component';
+import { LetterheadComponent } from './hero/letterhead/letterhead.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     PricingComponent,
-    InfographicComponent
+    InfographicComponent,
+    LogoComponent,
+    LetterheadComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
