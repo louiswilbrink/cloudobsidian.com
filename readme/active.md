@@ -14,11 +14,7 @@ Friendly, upbeat opening statement and rapport building.
     "It sure is getting warm in Seattle, is it heating down in Portland as well?"
     "I was on your website and you guys do some amazing work.  I especially like the university residence halls."
     "It looks like we have a common connection in Matthew Konecky.  He actually advises our multi-billion dollar corporate endowment.  How did you guys meet?"
-    "It looks like we both attended Penn State and both studied engineering.  What engineering did you study?”
-    "I just sent you a connection on LinkedIn."
-    "I’m doing well, and thank you for asking.  I got to the gym this morning and did one of those [bootcamps | spin classes] and it really took the wind out of me.  Have you ever tried one of those classes?"
-    "I know you guys are located in downtown Portland.  I was just there with my wife and we found an amazing sandwich shop just around the corner from [PIMCO], have you gotten a chance to try them out yet?"
-    "I’m actually new to Seattle, but have already found some of my favorite neighborhoods.  How long have you been in Seattle?"
+    "When I looked on [company name's] LinkedIn page, I saw that we both studied engineering at Penn State.  What engineering did you study?”
     "I saw that your company had recently launched new product X.  That is no easy task, but have you guys seen some good early traction?"
     "I’m with a company that recently launched in the PNW and it looks like your company is also in its first year.  I hope you guys have achieved some early wins!  How has this first year been for you guys?"
 
