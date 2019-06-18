@@ -28,7 +28,7 @@ Friendly, upbeat opening statement and rapport building.
 
 1. To introduce Cloud Obsidian.  We are a web development studio based in Seattle and we can build custom software for [company name].
 2. Share our process and how we bring design and engineering resources to your office.
-3. Discuss some ideas for apps that could achieve your company's revenue or cost-cutting goals.
+3. Discuss some ideas for apps that could achieve your company's strategic goals.
 
 ---
 
@@ -47,6 +47,7 @@ Friendly, upbeat opening statement and rapport building.
 2. Share a few examples of what we can build for [company name].
 2. Share a few solutions that we've successfully delivered to other clients.
 2. Discuss what key metrics drives revenue and growth for [company name].
+2. Discuss some logistics in your business that can benefit from software automation.
 2. Discuss what key metrics signal waste for [company name].
 2. Have a discussion on [company name]'s strategy for the year: is it drive growth or cut costs?  Software can be a tool to achieve either or both.
 
