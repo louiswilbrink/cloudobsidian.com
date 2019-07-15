@@ -16,34 +16,19 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.target = '.top';
     this.isOpen = false;
-
-    anime.set(this.target, {
-      translateX: '-100px',
-      translateY: '50px',
-      scale: 1,
-      rotate: '-45deg'
-    });
   }
 
   toggleMenu(isOpen) {
-    if (isOpen) {
-      anime({
-        targets: this.target,
-        scale: 12,
-        translateX: '-950px',
-        easing: 'easeOutQuad',
-        duration: 300
-      }); 
-    } else {
-      anime({
-        targets: this.target,
-        scale: 1,
-        translateX: '-100px',
-        easing: 'easeOutQuad',
-        duration: 300
-      }); 
-    }
-
-    this.isOpen = isOpen;
+    console.log('toggleMenu');
+    anime({
+      targets: this.target,
+      easing: 'easeOutQuad',
+      duration: 300,
+      points: [{ 
+        value: '0,0 150,0 0,150',
+      }, { 
+        value: '0,0 375,0 0,375' 
+      }],
+    }); 
   }
 }
