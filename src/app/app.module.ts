@@ -10,6 +10,7 @@ import { LogoComponent } from './hero/logo/logo.component';
 import { LetterheadComponent } from './hero/letterhead/letterhead.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { LineDrawingComponent } from './line-drawing/line-drawing.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MenuComponent } from './menu/menu.component';
     LogoComponent,
     LetterheadComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    LineDrawingComponent
   ],
   imports: [
     BrowserModule,
