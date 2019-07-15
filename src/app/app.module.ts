@@ -9,6 +9,7 @@ import { InfographicComponent } from './infographic/infographic.component';
 import { LogoComponent } from './hero/logo/logo.component';
 import { LetterheadComponent } from './hero/letterhead/letterhead.component';
 import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     InfographicComponent,
     LogoComponent,
     LetterheadComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
