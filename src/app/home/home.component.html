@@ -3,7 +3,10 @@
   (onScroll)="updateScrollPosition($event)">
   <div class="inner">
     <!--<co-menu></co-menu>-->
-    <co-links></co-links>
+    <co-links 
+      [scrollPosition]="scrollPosition" 
+      [height]="height">
+    </co-links>
     <div class="slides" style="background-color: #DDF8E8">1</div>
     <div class="slides" style="background-color: #CDD5D1">2</div>
     <div class="slides" style="background-color: #B4A6AB">3</div>

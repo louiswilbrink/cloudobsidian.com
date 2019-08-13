@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'co-links',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./links.component.scss']
 })
 export class LinksComponent implements OnInit {
+  scrollScript: [] = [];
+
+  @Input() scrollPosition: number;
+  @Input() height: number;
 
   constructor() { }
 

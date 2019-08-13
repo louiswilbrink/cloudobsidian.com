@@ -1,7 +1,7 @@
 <div class="links">
   <span class="first">
-    <div>HOME</div>
-    <div class="active"></div>
+    <div [ngStyle]="{'color': 'blue'}">HOME</div>
+    <div class="active" [ngStyle]="{ 'transform': 'translate(0px, -' + scrollPosition + 'px)' }"></div>
   </span>
   <span>
     <div>ABOUT US</div>

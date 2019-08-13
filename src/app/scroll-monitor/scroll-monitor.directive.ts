@@ -9,7 +9,7 @@ export class ScrollMonitorDirective {
   constructor() { }
 
   @HostListener('scroll', ['$event'])
-    _($event) {
+    reportScrollPosition($event) {
       this.onScroll.emit($event.srcElement.scrollTop);
    }
 }
