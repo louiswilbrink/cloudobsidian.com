@@ -1,0 +1,20 @@
+.links {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-size: 17px;
+
+  span {
+    margin-left: 50px;
+
+    &.first {
+      margin-left: 0px;
+    } 
+  }
+
+  svg {
+    rect {
+      fill: red;
+    }
+  }
+}

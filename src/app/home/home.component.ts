@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'co-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  updateScrollPosition($event) {
+    console.log('$event', $event);
+  }
 }
