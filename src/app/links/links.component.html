@@ -1,18 +1,18 @@
 <div class="links">
   <span class="first">
-    <div [ngStyle]="{'color': 'blue'}">HOME</div>
-    <div class="active" [ngStyle]="{ 'transform': 'translate(0px, -' + scrollPosition + 'px)' }"></div>
+    <!--<div>HOME</div>-->
+    <div>{{ scrollPosition }}</div>
+    <div class="active" 
+      [ngStyle]="{ 'transform': 'translate(0px, ' + homeScript[scrollPosition] + 'px)' }">
+    </div>
   </span>
   <span>
     <div>ABOUT US</div>
-    <div class="active"></div>
   </span>
   <span>
     <div>PROCESS</div>
-    <div class="active"></div>
   </span>
   <span>
     <div>SERVICES & PRICING</div>
-    <div class="active"></div>
   </span>
 </div>

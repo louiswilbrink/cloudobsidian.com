@@ -7,17 +7,21 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   scrollPosition: number;
-  height: number;
+  totalScrollPositions: number;
 
   constructor() { }
 
+  configScroll() {
+    this.totalScrollPositions = (window.innerHeight * 10) - window.innerHeight;
+  }
+
   ngOnInit() {
     this.scrollPosition = 0;
-    this.height = window.innerHeight;
+    this.configScroll();
   }
 
   @HostListener('window:resize') onResize() {
-    this.height = window.innerHeight;
+    this.configScroll();
   }
 
   updateScrollPosition(scrollPosition) {
