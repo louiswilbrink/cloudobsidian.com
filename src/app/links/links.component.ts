@@ -47,57 +47,84 @@ export class LinksComponent implements OnInit {
     let endFadeScript = [...Array(endDuration)].map(() => 0);
 
     // Splice start, action & end scenes into the full script.
-    this.homeMoveScript.splice(0, startDuration, ...startMoveScript);
-    this.homeMoveScript.splice(startDuration, startDuration + actionDuration, ...actionMoveScript);
-    this.homeMoveScript.splice(startDuration + actionDuration, startDuration + actionDuration + endDuration, ...endMoveScript);
-    this.homeFadeScript.splice(0, startDuration, ...startFadeScript);
-    this.homeFadeScript.splice(startDuration, startDuration + actionDuration, ...actionFadeScript);
-    this.homeFadeScript.splice(startDuration + actionDuration, startDuration + actionDuration + endDuration, ...endFadeScript);
+    this.homeMoveScript.splice(
+      0, 
+      startDuration, 
+      ...startMoveScript);
+    this.homeMoveScript.splice(
+      startDuration, 
+      actionDuration, 
+      ...actionMoveScript);
+    this.homeMoveScript.splice(
+      startDuration + actionDuration, 
+      endDuration, 
+      ...endMoveScript);
+
+    this.homeFadeScript.splice(
+      0, 
+      startDuration, 
+      ...startFadeScript);
+    this.homeFadeScript.splice(
+      startDuration, 
+      actionDuration, 
+      ...actionFadeScript);
+    this.homeFadeScript.splice(
+      startDuration + actionDuration, 
+      endDuration, 
+      ...endFadeScript);
   }
 
   buildAboutUsScript(): any {
     // Initialize full script for the home active decorator.
-    this.aboutUsMoveScript = [...Array(this.totalScrollPositions)].map(() => 0);
+    this.aboutUsMoveScript = [...Array(this.totalScrollPositions)].map(() => 30);
     this.aboutUsFadeScript = [...Array(this.totalScrollPositions)].map(() => 0);
 
-    let preSceneDuration = Math.floor(this.totalScrollPositions * 0.1);
+    let preSceneDuration = Math.floor(this.totalScrollPositions * 0.09);
     let sceneDuration = Math.floor(this.totalScrollPositions * 0.3); // 3 out of 10 scenes.
 
-    // startHide, fadeIn, display, fadeOut, endHide
-    //    30         0       0       30        30
-    //    5%        10%     70%      10%       5% (of sceneDuration)
-    let startHideDuration = Math.floor(sceneDuration * 0.05); 
-    let fadeInDuration = Math.floor(sceneDuration * 0.1);
-    let displayDuration = Math.floor(sceneDuration * 0.7); 
-    let fadeOutDuration = Math.floor(sceneDuration * 0.1); 
-    let endHideDuration = Math.floor(sceneDuration * 0.05); 
+    // fadeIn, display, fadeOut
+    //  30px     0px      30px 
+    //   5%      90%       5%   (of sceneDuration)
+    let fadeInDuration = Math.floor(sceneDuration * 0.05);
+    let displayDuration = Math.floor(sceneDuration * 0.9); 
+    let fadeOutDuration = Math.floor(sceneDuration * 0.05); 
 
     // Set the y-axis tranlate value from 0 to 30.
-    let startHideMoveScript = [...Array(startHideDuration)].map(() => 30);
     let fadeInMoveScript = [...Array(fadeInDuration)].map((_, t) => 30 - this.easeInQuad(null, t, 0, 30, fadeInDuration)); 
     let displayMoveScript = [...Array(displayDuration)].map(() => 0);
     let fadeOutMoveScript = [...Array(fadeOutDuration)].map((_, t) => this.easeInQuad(null, t, 0, 30, fadeOutDuration)); 
-    let endHideMoveScript = [...Array(endHideDuration)].map(() => 30);
 
     // Set the opacity from 1 to 0.
-    let startHideFadeScript = [...Array(startHideDuration)].map(() => 0);
     let fadeInFadeScript = [...Array(fadeInDuration)].map((_, t) => this.easeInQuad(null, t, 0, 1, fadeInDuration)); 
     let displayFadeScript = [...Array(displayDuration)].map(() => 1);
     let fadeOutFadeScript = [...Array(fadeOutDuration)].map((_, t) => 1 - this.easeInQuad(null, t, 0, 1, fadeOutDuration));
-    let endHideFadeScript = [...Array(endHideDuration)].map(() => 0);
 
     // Splice start, action & end scenes into the full script.
-    this.aboutUsMoveScript.splice(preSceneDuration, preSceneDuration + startHideDuration, ...startHideMoveScript);
-    this.aboutUsMoveScript.splice(preSceneDuration + startHideDuration, preSceneDuration + startHideDuration + fadeInDuration, ...fadeInMoveScript);
-    this.aboutUsMoveScript.splice(preSceneDuration + startHideDuration + fadeInDuration, preSceneDuration + startHideDuration + fadeInDuration + displayDuration, ...displayMoveScript);
-    this.aboutUsMoveScript.splice(preSceneDuration + startHideDuration + fadeInDuration + displayDuration, preSceneDuration + startHideDuration + fadeInDuration + displayDuration + fadeOutDuration, ...fadeOutMoveScript);
-    this.aboutUsMoveScript.splice(preSceneDuration + startHideDuration + fadeInDuration + displayDuration + fadeOutDuration, preSceneDuration + startHideDuration + fadeInDuration + displayDuration + fadeOutDuration + endHideDuration, ...endHideMoveScript);
+    this.aboutUsMoveScript.splice(
+      preSceneDuration, 
+      fadeInDuration, 
+      ...fadeInMoveScript);
+    this.aboutUsMoveScript.splice(
+      preSceneDuration + fadeInDuration, 
+      displayDuration, 
+      ...displayMoveScript);
+    this.aboutUsMoveScript.splice(
+      preSceneDuration + fadeInDuration + displayDuration, 
+      fadeOutDuration, 
+      ...fadeOutMoveScript);
 
-    this.aboutUsFadeScript.splice(preSceneDuration, preSceneDuration + startHideDuration, ...startHideFadeScript);
-    this.aboutUsFadeScript.splice(preSceneDuration + startHideDuration, preSceneDuration + startHideDuration + fadeInDuration, ...fadeInFadeScript);
-    this.aboutUsFadeScript.splice(preSceneDuration + startHideDuration + fadeInDuration, preSceneDuration + startHideDuration + fadeInDuration + displayDuration, ...displayFadeScript);
-    this.aboutUsFadeScript.splice(preSceneDuration + startHideDuration + fadeInDuration + displayDuration, preSceneDuration + startHideDuration + fadeInDuration + displayDuration + fadeOutDuration, ...fadeOutFadeScript);
-    this.aboutUsFadeScript.splice(preSceneDuration + startHideDuration + fadeInDuration + displayDuration + fadeOutDuration, preSceneDuration + startHideDuration + fadeInDuration + displayDuration + fadeOutDuration + endHideDuration, ...endHideFadeScript);
+    this.aboutUsFadeScript.splice(
+      preSceneDuration, 
+      fadeInDuration, 
+      ...fadeInFadeScript);
+    this.aboutUsFadeScript.splice(
+      preSceneDuration + fadeInDuration, 
+      displayDuration, 
+      ...displayFadeScript);
+    this.aboutUsFadeScript.splice(
+      preSceneDuration + fadeInDuration + displayDuration, 
+      fadeOutDuration, 
+      ...fadeOutFadeScript);
   }
 
   ngOnInit() {
