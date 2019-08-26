@@ -1,5 +1,4 @@
 import { Component, Input, Output } from '@angular/core';
-import { OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -23,7 +22,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 	])
 ]
 })
-export class SlideComponent implements OnInit, OnChanges {
+export class SlideComponent implements OnInit {
   @Input() key: number;
   @Input() start: number;
   @Input() end: number;
@@ -32,9 +31,5 @@ export class SlideComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    console.log('changing..');
   }
 }

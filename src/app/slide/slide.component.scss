@@ -1,13 +1,49 @@
 .slide {
   height: 100vh;
   width: 100%;
-  font-size: 72px;
-  color: red;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-end;
-  align-content: center;
-  opacity: 0;
+  position: relative;
+
+  .grid {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    position: fixed;
+    top: 0px;
+    pointer-events: none;
+    width: 100%;
+
+    .column {
+      width: 40%;
+      position: relative;
+
+      .content {
+        position: absolute;
+        left: -150px;
+        margin-top: 40%;
+
+        img {
+          width: 250px;
+          height: 350px;
+          display: inline-block;
+          margin-right: 45px;
+          vertical-align: top;
+        }
+
+        .text {
+          display: inline-block;
+          vertical-align: top;
+
+          h1 {
+            margin: 0px;
+          }
+
+          p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
 }

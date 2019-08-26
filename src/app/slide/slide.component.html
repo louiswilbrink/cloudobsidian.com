@@ -1,1 +1,23 @@
-<div class="slide" [@fadeInOut]="scrollPosition >= start && scrollPosition <= end? 'fadeIn' : 'fadeOut'">Slide {{ key }} {{ start }} {{ end }} {{ scrollPosition }}</div>
+<div class="slide">
+  <div class="grid"
+    [@fadeInOut]="scrollPosition >= start && scrollPosition <= end? 'fadeIn' : 'fadeOut'">
+    <div class="column">
+      <div>1</div>
+      <div>Slide {{ key }}</div>
+      <div>{{ start }}, {{ end }}</div>
+      <div>{{ scrollPosition }}</div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="https://placekitten.com/g/300/400"/>
+        <div class="text">
+          <h1>Header</h1>
+          <p>lorem ipsum</p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div>3</div>
+    </div>
+  </div>
+</div>
