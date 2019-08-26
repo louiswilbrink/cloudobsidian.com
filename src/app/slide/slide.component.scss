@@ -1,0 +1,13 @@
+.slide {
+  height: 100vh;
+  width: 100%;
+  font-size: 72px;
+  color: red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  opacity: 0;
+}

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,7 @@ import { MenuComponent } from './menu/menu.component'
 import { HomeComponent } from './home/home.component';
 import { LinksComponent } from './links/links.component';
 import { ScrollMonitorDirective } from './scroll-monitor/scroll-monitor.directive';
+import { SlideComponent } from './slide/slide.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import { ScrollMonitorDirective } from './scroll-monitor/scroll-monitor.directiv
     MenuComponent,
     HomeComponent,
     LinksComponent,
-    ScrollMonitorDirective
+    ScrollMonitorDirective,
+    SlideComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],
