@@ -2,19 +2,18 @@
   <span class="first">
     <div>HOME</div>
     <div class="active" 
-      [ngStyle]="{ 'transform': 'translate(0px, ' + homeMoveScript[scrollPosition] + 'px)', 'opacity': homeFadeScript[scrollPosition] }">
-    </div>
+      [@linkActivation]="scrollPosition >= slides[0].start && scrollPosition < slides[0].end ? 'activate' : 'deactivate'"></div>
   </span>
   <span>
     <div>ABOUT US</div>
-    <div class="active" 
-      [ngStyle]="{ 'transform': 'translate(0px, ' + aboutUsMoveScript[scrollPosition] + 'px)', 'opacity': aboutUsFadeScript[scrollPosition] }">
-    </div>
+    <div class="active" [@linkActivation]="scrollPosition >= slides[1].start && scrollPosition < slides[3].end ? 'activate' : 'deactivate'"></div>
   </span>
   <span>
     <div>PROCESS</div>
+    <div class="active" [@linkActivation]="scrollPosition >= slides[4].start && scrollPosition < slides[6].end ? 'activate' : 'deactivate'"></div>
   </span>
   <span>
     <div>SERVICES & PRICING</div>
+    <div class="active" [@linkActivation]="scrollPosition >= slides[7].start && scrollPosition < slides[9].end ? 'activate' : 'deactivate'"></div>
   </span>
 </div>

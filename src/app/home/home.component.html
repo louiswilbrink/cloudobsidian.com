@@ -5,7 +5,7 @@
     <!--<co-menu></co-menu>-->
     <co-links
       [scrollPosition]="scrollPosition" 
-      [totalScrollPositions]="totalScrollPositions">
+      [slides]="slides">
     </co-links>
     <co-slide *ngFor="let slide of slides; index as i; trackBy: trackByFn"
       [key]="i" 
