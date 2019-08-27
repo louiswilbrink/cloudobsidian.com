@@ -1,20 +1,18 @@
 <div class="slide">
   <div class="grid"
-    [@fadeInOut]="scrollPosition >= start && scrollPosition <= end ? 'fadeIn' : 'fadeOut'">
+    [@fadeInOut]="scrollPosition >= slide.start && scrollPosition <= slide.end ? 'fadeIn' : 'fadeOut'">
     <div class="column">
       <div>1</div>
       <div>Slide {{ key }}</div>
-      <div>{{ start }}, {{ end }}</div>
+      <div>{{ slide.start }}, {{ slide.end }}</div>
       <div>{{ scrollPosition }}</div>
     </div>
     <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Header</h1>
-          <p>lorem ipsum</p>
-        </div>
-      </div>
+      <co-content-slide
+        [title]="slide.content.title"
+        [text]="slide.content.text"
+        [buttonText]="slide.content.buttonText">
+      </co-content-slide>
     </div>
     <div class="column">
       <div>3</div>

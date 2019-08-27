@@ -23,10 +23,17 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class SlideComponent implements OnInit {
-  @Input() key: number;
-  @Input() start: number;
-  @Input() end: number;
   @Input() scrollPosition: number;
+  @Input() key: number;
+  @Input() slide: {
+    start: number;
+    end: number;
+    content: {
+      title: string;
+      text: string;
+      buttonText: string;
+    }
+  }
 
   constructor() { }
 

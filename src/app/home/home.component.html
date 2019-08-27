@@ -8,10 +8,9 @@
       [slides]="slides">
     </co-links>
     <co-slide *ngFor="let slide of slides; index as i; trackBy: trackByFn"
+      [scrollPosition]="scrollPosition"
       [key]="i" 
-      [start]="slide.start" 
-      [end]="slide.end"
-      [scrollPosition]="scrollPosition">
+      [slide]="slide">
     </co-slide>
   </div>
 </div>
