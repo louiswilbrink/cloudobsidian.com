@@ -16,6 +16,9 @@ import { AboutUsThreeComponent } from './slides/about-us-three/about-us-three.co
 import { ProcessOneComponent } from './slides/process-one/process-one.component';
 import { ProcessTwoComponent } from './slides/process-two/process-two.component';
 import { ProcessThreeComponent } from './slides/process-three/process-three.component';
+import { ServicesOneComponent } from './slides/services-one/services-one.component';
+import { ServicesTwoComponent } from './slides/services-two/services-two.component';
+import { ServicesThreeComponent } from './slides/services-three/services-three.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ProcessThreeComponent } from './slides/process-three/process-three.comp
     AboutUsThreeComponent,
     ProcessOneComponent,
     ProcessTwoComponent,
-    ProcessThreeComponent
+    ProcessThreeComponent,
+    ServicesOneComponent,
+    ServicesTwoComponent,
+    ServicesThreeComponent
   ],
   imports: [
     BrowserModule,
