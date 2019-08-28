@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LinksComponent } from './links/links.component';
 import { ScrollMonitorDirective } from './scroll-monitor/scroll-monitor.directive';
 import { SlideComponent } from './slide/slide.component';
+import { LogoComponent } from './slides/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SlideComponent } from './slide/slide.component';
     HomeComponent,
     LinksComponent,
     ScrollMonitorDirective,
-    SlideComponent
+    SlideComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
