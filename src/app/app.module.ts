@@ -13,6 +13,9 @@ import { LogoComponent } from './slides/logo/logo.component';
 import { AboutUsOneComponent } from './slides/about-us-one/about-us-one.component';
 import { AboutUsTwoComponent } from './slides/about-us-two/about-us-two.component';
 import { AboutUsThreeComponent } from './slides/about-us-three/about-us-three.component';
+import { ProcessOneComponent } from './slides/process-one/process-one.component';
+import { ProcessTwoComponent } from './slides/process-two/process-two.component';
+import { ProcessThreeComponent } from './slides/process-three/process-three.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { AboutUsThreeComponent } from './slides/about-us-three/about-us-three.co
     LogoComponent,
     AboutUsOneComponent,
     AboutUsTwoComponent,
-    AboutUsThreeComponent
+    AboutUsThreeComponent,
+    ProcessOneComponent,
+    ProcessTwoComponent,
+    ProcessThreeComponent
   ],
   imports: [
     BrowserModule,
