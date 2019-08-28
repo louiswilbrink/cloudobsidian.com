@@ -27,12 +27,7 @@ export class HomeComponent implements OnInit {
     this.slides = [...Array(this.slideTotal)].map((x, i) => {
       return {
         start: window.innerHeight * i,
-        end: (window.innerHeight * (i + 1)) - Math.floor(window.innerHeight * 0.3),
-        content: {
-          title: 'Some title',
-          text: 'Lorem ipsum and then sum.',
-          buttonText: 'Find out more'
-        }
+        end: (window.innerHeight * (i + 1)) - Math.floor(window.innerHeight * 0.3)
       };
     });
   }

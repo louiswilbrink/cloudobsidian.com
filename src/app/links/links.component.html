@@ -1,19 +1,25 @@
 <div class="links">
   <span class="first">
-    <div>HOME</div>
+    <div><a [routerLink]="['']" fragment="logo">HOME</a></div>
     <div class="active" 
       [@linkActivation]="scrollPosition >= slides[0].start && scrollPosition < slides[0].end ? 'activate' : 'deactivate'"></div>
   </span>
   <span>
-    <div>ABOUT US</div>
-    <div class="active" [@linkActivation]="scrollPosition >= slides[1].start && scrollPosition < slides[3].end ? 'activate' : 'deactivate'"></div>
+    <div><a [routerLink]="['']" fragment="about-us">ABOUT US</a></div>
+    <div class="active" 
+      [@linkActivation]="scrollPosition >= slides[1].start && scrollPosition < slides[3].end ? 'activate' : 'deactivate'">
+    </div>
   </span>
   <span>
-    <div>PROCESS</div>
-    <div class="active" [@linkActivation]="scrollPosition >= slides[4].start && scrollPosition < slides[6].end ? 'activate' : 'deactivate'"></div>
+    <div><a [routerLink]="['']" fragment="process">PROCESS</a></div>
+    <div class="active" 
+      [@linkActivation]="scrollPosition >= slides[4].start && scrollPosition < slides[6].end ? 'activate' : 'deactivate'">
+    </div>
   </span>
   <span>
-    <div>SERVICES & PRICING</div>
-    <div class="active" [@linkActivation]="scrollPosition >= slides[7].start && scrollPosition < slides[9].end ? 'activate' : 'deactivate'"></div>
+    <div><a [routerLink]="['']" fragment="services">SERVICES & PRICING</a></div>
+    <div class="active" 
+      [@linkActivation]="scrollPosition >= slides[7].start && scrollPosition < slides[9].end ? 'activate' : 'deactivate'">
+    </div>
   </span>
 </div>

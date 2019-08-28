@@ -19,6 +19,7 @@ import { ProcessThreeComponent } from './slides/process-three/process-three.comp
 import { ServicesOneComponent } from './slides/services-one/services-one.component';
 import { ServicesTwoComponent } from './slides/services-two/services-two.component';
 import { ServicesThreeComponent } from './slides/services-three/services-three.component';
+import { ScrollIntoViewDirective } from './scroll-into-view/scroll-into-view.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ServicesThreeComponent } from './slides/services-three/services-three.c
     ProcessThreeComponent,
     ServicesOneComponent,
     ServicesTwoComponent,
-    ServicesThreeComponent
+    ServicesThreeComponent,
+    ScrollIntoViewDirective
   ],
   imports: [
     BrowserModule,
