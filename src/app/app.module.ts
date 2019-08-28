@@ -11,6 +11,7 @@ import { ScrollMonitorDirective } from './scroll-monitor/scroll-monitor.directiv
 import { SlideComponent } from './slide/slide.component';
 import { LogoComponent } from './slides/logo/logo.component';
 import { AboutUsOneComponent } from './slides/about-us-one/about-us-one.component';
+import { AboutUsTwoComponent } from './slides/about-us-two/about-us-two.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutUsOneComponent } from './slides/about-us-one/about-us-one.componen
     ScrollMonitorDirective,
     SlideComponent,
     LogoComponent,
-    AboutUsOneComponent
+    AboutUsOneComponent,
+    AboutUsTwoComponent
   ],
   imports: [
     BrowserModule,
