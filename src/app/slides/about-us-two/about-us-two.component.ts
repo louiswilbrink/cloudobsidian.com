@@ -38,7 +38,7 @@ export class AboutUsTwoComponent implements OnInit {
 
   constructor() {
     this.lottieConfig = {
-      path: 'assets/about-us-one.json',
+      path: 'assets/maps-and-charts.json',
       renderer: 'svg',
       autoplay: true,
       loop: true
