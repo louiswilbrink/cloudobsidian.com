@@ -35,6 +35,25 @@
           font-size: 17px;
         }
 
+        .bullets {
+
+          .bullet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+
+            img {
+              margin-right: 10px;
+            }
+
+            span {
+            }
+          }
+        }
+
         button {
           margin-top: 10px;
           font-size: 17px;
