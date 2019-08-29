@@ -5,26 +5,21 @@
 
   .grid {
     height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
+    width: 100%;
     position: fixed;
     top: 0px;
     pointer-events: none;
-    width: 100%;
 
     .content {
       position: fixed;
-      top: 20vh;
+      top: 25vh;
+      left: 15vw;
 
       .animation {
         width: 500px;
         display: inline-block;
         margin-right: 0px;
         vertical-align: top;
-      }
-
-      lottie-animation-view {
       }
 
       .text {
@@ -36,8 +31,18 @@
         }
 
         p {
-          margin-top: 20px;
-          margin-bottom: 20px;
+          width: 300px;
+          font-size: 17px;
+        }
+
+        button {
+          margin-top: 10px;
+          font-size: 17px;
+          width: 250px;
+          height: 40px;
+          background-color: #F2275A;
+          color: #FFFFFF;
+          border: 0px;
         }
       }
     }
