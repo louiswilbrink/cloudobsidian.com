@@ -1,21 +1,14 @@
-<div class="slide">
-  <div class="grid"
-    [@fadeInOut]="scrollPosition >= slide.start && scrollPosition <= slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>About Us Two</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
-        </div>
+<div id="about-us-two" [scrollIntoView]="'about-us-two'">
+  <div class="slide" [@fadeInOut]="scrollPosition >= slide.start && scrollPosition <= slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
       </div>
-    </div>
-    <div class="column">
-      3
+      <div class="text">
+        <h1>What applications do we build?</h1>
+        <p>Innovation is necessary to compete in virtually any industry.  What can we build for you to raise the standard?</p>
+        <button type="button">See popular projects</button>
+      </div>
     </div>
   </div>
 </div>

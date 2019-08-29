@@ -45,10 +45,6 @@ export class AboutUsOneComponent implements OnInit {
     };
   }
 
-  handleAnimation(event) {
-    console.log('animation handled', event);
-  }
-
   ngOnInit() {
   }
 }

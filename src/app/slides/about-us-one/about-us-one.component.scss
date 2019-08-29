@@ -1,9 +1,9 @@
-.slide {
+#about-us {
   height: 100vh;
   width: 100%;
   position: relative;
 
-  .grid {
+  .slide {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -11,7 +11,7 @@
     pointer-events: none;
 
     .content {
-      position: fixed;
+      position: relative;
       top: 25vh;
       left: 15vw;
 
