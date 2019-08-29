@@ -3,19 +3,22 @@
   width: 100%;
   position: relative;
 
-  .grid {
-    height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    position: fixed;
-    top: 0px;
-    pointer-events: none;
+  .logo {
     width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 40vh;
+    pointer-events: none;
 
-    .column {
-      width: 40%;
+    img {
+      width: 225px;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 400;
       position: relative;
+      left: 40px;
     }
   }
 }
