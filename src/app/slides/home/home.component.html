@@ -1,11 +1,11 @@
-<div id="logo" class="slide" [scrollIntoView]="'logo'">
+<div id="home" class="slide" [scrollIntoView]="'home'">
   <div class="grid"
     [@fadeInOut]="scrollPosition >= slide.start && scrollPosition <= slide.end ? 'fadeIn' : 'fadeOut'">
     <div class="column">
       <div>1</div>
     </div>
     <div class="column">
-      <div>Logo Slide</div>
+      <div>Home Slide</div>
       <div>{{ slide.start }}, {{ slide.end }}</div>
       <div>{{ scrollPosition }}</div>
     </div>

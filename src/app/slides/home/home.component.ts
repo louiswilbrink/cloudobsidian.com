@@ -2,9 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
-  selector: 'co-logo',
-  templateUrl: './logo.component.html',
-  styleUrls: ['./logo.component.scss'],
+  selector: 'co-home-slide',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 	animations: [
     trigger('fadeInOut', [
       state(
@@ -22,16 +22,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ])
   ]
 })
-export class LogoComponent implements OnInit {
+export class HomeComponent implements OnInit {
   @Input() scrollPosition: number;
   @Input() slide: {
     start: number;
     end: number;
   }
 
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }
