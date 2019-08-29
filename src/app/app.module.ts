@@ -21,6 +21,7 @@ import { ServicesTwoComponent } from './slides/services-two/services-two.compone
 import { ServicesThreeComponent } from './slides/services-three/services-three.component';
 import { ScrollIntoViewDirective } from './scroll-into-view/scroll-into-view.directive';
 import { LogoComponent } from './logo/logo.component';
+import { LeadingBarComponent } from './leading-bar/leading-bar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LogoComponent } from './logo/logo.component';
     ServicesTwoComponent,
     ServicesThreeComponent,
     ScrollIntoViewDirective,
-    LogoComponent
+    LogoComponent,
+    LeadingBarComponent
   ],
   imports: [
     BrowserModule,
