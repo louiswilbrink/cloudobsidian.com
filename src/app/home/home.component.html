@@ -3,6 +3,10 @@
   (onScroll)="updateScrollPosition($event)">
   <div class="inner">
     <!--<co-menu></co-menu>-->
+    <co-logo 
+      [scrollPosition]="scrollPosition"
+      [start]="slides[1].start">
+    </co-logo>
     <co-links
       [scrollPosition]="scrollPosition" 
       [slides]="slides">

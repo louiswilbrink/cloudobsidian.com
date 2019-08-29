@@ -20,6 +20,7 @@ import { ServicesOneComponent } from './slides/services-one/services-one.compone
 import { ServicesTwoComponent } from './slides/services-two/services-two.component';
 import { ServicesThreeComponent } from './slides/services-three/services-three.component';
 import { ScrollIntoViewDirective } from './scroll-into-view/scroll-into-view.directive';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ScrollIntoViewDirective } from './scroll-into-view/scroll-into-view.dir
     ServicesOneComponent,
     ServicesTwoComponent,
     ServicesThreeComponent,
-    ScrollIntoViewDirective
+    ScrollIntoViewDirective,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
