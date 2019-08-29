@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LottieAnimationViewModule } from 'ng-lottie';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -44,7 +45,8 @@ import { ScrollIntoViewDirective } from './scroll-into-view/scroll-into-view.dir
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LottieAnimationViewModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

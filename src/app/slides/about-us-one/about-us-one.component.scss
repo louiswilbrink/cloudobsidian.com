@@ -13,35 +13,31 @@
     pointer-events: none;
     width: 100%;
 
-    .column {
-      width: 40%;
-      position: relative;
+    .content {
+      position: fixed;
+      top: 20vh;
 
-      .content {
-        position: absolute;
-        left: -150px;
-        margin-top: 40%;
+      .animation {
+        width: 500px;
+        display: inline-block;
+        margin-right: 0px;
+        vertical-align: top;
+      }
 
-        img {
-          width: 250px;
-          height: 350px;
-          display: inline-block;
-          margin-right: 45px;
-          vertical-align: top;
+      lottie-animation-view {
+      }
+
+      .text {
+        display: inline-block;
+        vertical-align: top;
+
+        h1 {
+          margin: 0px;
         }
 
-        .text {
-          display: inline-block;
-          vertical-align: top;
-
-          h1 {
-            margin: 0px;
-          }
-
-          p {
-            margin-top: 20px;
-            margin-bottom: 20px;
-          }
+        p {
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
       }
     }

@@ -29,9 +29,26 @@ export class AboutUsOneComponent implements OnInit {
     end: number;
   }
 
-  constructor() { }
+  lottieConfig: {
+    path: string;
+    renderer: string;
+    autoplay: boolean;
+    loop: boolean;
+  }
+
+  constructor() {
+    this.lottieConfig = {
+      path: 'assets/about-us-one.json',
+      renderer: 'svg',
+      autoplay: true,
+      loop: true
+    };
+  }
+
+  handleAnimation(event) {
+    console.log('animation handled', event);
+  }
 
   ngOnInit() {
   }
-
 }
