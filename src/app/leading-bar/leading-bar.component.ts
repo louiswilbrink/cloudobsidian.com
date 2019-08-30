@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-leading-bar',
+  selector: 'co-leading-bar',
   templateUrl: './leading-bar.component.html',
   styleUrls: ['./leading-bar.component.scss']
 })
