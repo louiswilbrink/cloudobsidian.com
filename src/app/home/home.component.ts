@@ -1,17 +1,23 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Observable, fromEvent, interval } from 'rxjs';
+import { throttle } from 'rxjs/operators';
 
 @Component({
   selector: 'co-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer: ElementRef;
+
   slides: {
     start: number,
     end: number
   }[];
   slideTotal: number;
   scrollPosition: number;
+  scrollPosition$: Observable;
   totalScrollPositions: number;
 
   constructor() {
@@ -35,6 +41,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.scrollPosition = 0;
     this.configScroll();
+  }
+
+  ngAfterViewInit() {
+    this.scrollPosition$ = fromEvent(this.scrollContainer.nativeElement, 'scroll')
+      .pipe(throttle(ev => interval(150)))
+      .subscribe(($event) => {
+        console.log('scrolling..', $event.srcElement.scrollTop);
+      });
   }
 
   @HostListener('window:resize') onResize() {
