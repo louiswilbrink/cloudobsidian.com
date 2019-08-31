@@ -1,7 +1,7 @@
 <div id="home" 
   class="slide" 
   [scrollIntoView]="'home'" 
-  [@fadeInOut]="scrollPosition >= slide.start && scrollPosition <= slide.end ? 'fadeIn' : 'fadeOut'">
+  [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
   <div class="logo">
     <img src="assets/cloud-obsidian.svg" alt="cloud obsidian logo"/>
     <p>A web development studio</p>
