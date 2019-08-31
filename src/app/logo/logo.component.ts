@@ -29,11 +29,11 @@ export class LogoComponent implements OnInit {
 
   scrollTop: number;
 
-  constructor(private scrollService: ScrollService) {
-    this.scrollTop = 0;
-  }
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit() {
+    this.scrollTop = 0;
+
     this.scrollService.getScrollTop().subscribe((scrollTop) => {
       this.scrollTop = scrollTop;
     });

@@ -2,24 +2,24 @@
   <span class="first">
     <div><a [routerLink]="['']" fragment="home">HOME</a></div>
     <div class="active" 
-      [@linkActivation]="scrollPosition >= slides[0].start && scrollPosition < slides[0].end ? 'activate' : 'deactivate'"></div>
+      [@linkActivation]="scrollTop >= slides[0].start && scrollTop < slides[0].end ? 'activate' : 'deactivate'"></div>
   </span>
   <span>
     <div><a [routerLink]="['']" fragment="about-us">ABOUT US</a></div>
     <div class="active" 
-      [@linkActivation]="scrollPosition >= slides[1].start && scrollPosition < slides[3].end ? 'activate' : 'deactivate'">
+      [@linkActivation]="scrollTop >= slides[1].start && scrollTop < slides[3].end ? 'activate' : 'deactivate'">
     </div>
   </span>
   <span>
     <div><a [routerLink]="['']" fragment="process">PROCESS</a></div>
     <div class="active" 
-      [@linkActivation]="scrollPosition >= slides[4].start && scrollPosition < slides[6].end ? 'activate' : 'deactivate'">
+      [@linkActivation]="scrollTop >= slides[4].start && scrollTop < slides[6].end ? 'activate' : 'deactivate'">
     </div>
   </span>
   <span>
     <div><a [routerLink]="['']" fragment="services">SERVICES & PRICING</a></div>
     <div class="active" 
-      [@linkActivation]="scrollPosition >= slides[7].start && scrollPosition < slides[9].end ? 'activate' : 'deactivate'">
+      [@linkActivation]="scrollTop >= slides[7].start && scrollTop < slides[9].end ? 'activate' : 'deactivate'">
     </div>
   </span>
 </div>
