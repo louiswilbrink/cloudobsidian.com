@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
+import { ScrollService } from '../../scroll.service';
+
 @Component({
   selector: 'co-about-us-one',
   templateUrl: './about-us-one.component.html',
@@ -23,11 +25,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class AboutUsOneComponent implements OnInit {
-  @Input() scrollPosition: number;
   @Input() slide: {
     start: number;
     end: number;
   }
+
+  scrollTop: number;
 
   lottieConfig: {
     path: string;
@@ -36,15 +39,20 @@ export class AboutUsOneComponent implements OnInit {
     loop: boolean;
   }
 
-  constructor() {
+  constructor(private scrollService: ScrollService) { }
+
+  ngOnInit() {
+    this.scrollTop = 0;
+
+    this.scrollService.getScrollTop().subscribe((scrollTop) => {
+      this.scrollTop = scrollTop;
+    });
+
     this.lottieConfig = {
       path: 'assets/coders-and-designers.json',
       renderer: 'svg',
       autoplay: true,
       loop: true
     };
-  }
-
-  ngOnInit() {
   }
 }
