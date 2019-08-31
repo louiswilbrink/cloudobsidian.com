@@ -25,16 +25,17 @@ import { ScrollService } from '../scroll.service';
   ]
 })
 export class LogoComponent implements OnInit {
-  scrollPosition: number;
   @Input() start: number;
 
+  scrollTop: number;
+
   constructor(private scrollService: ScrollService) {
-    this.scrollPosition = 0;
+    this.scrollTop = 0;
   }
 
   ngOnInit() {
-    this.scrollService.getScrollTop().subscribe(($event) => {
-      console.log('logo scrolling..', $event);
+    this.scrollService.getScrollTop().subscribe((scrollTop) => {
+      this.scrollTop = scrollTop;
     });
   }
 }
