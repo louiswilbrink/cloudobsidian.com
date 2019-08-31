@@ -6,5 +6,9 @@
   .inner {
     height: 1000vh; // needs to match HomeComponent.slideTotal.
     width: 100%;
+
+    .scroll-buffer {
+      height: 100vh;
+    }
   }
 }

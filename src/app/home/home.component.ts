@@ -32,6 +32,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     // start slides at scroll position [0, 100, 200, ..],
     // end slides at scroll position [70, 170, 270, ..]
     this.slides = [...Array(this.slideTotal)].map((x, i) => {
+      let louis = {
+        start: window.innerHeight * i,
+        end: (window.innerHeight * (i + 1)) - Math.floor(window.innerHeight * 0.3)
+      };
+
+      console.log(louis);
+
       return {
         start: window.innerHeight * i,
         end: (window.innerHeight * (i + 1)) - Math.floor(window.innerHeight * 0.3)

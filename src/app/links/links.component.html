@@ -19,7 +19,7 @@
   <span>
     <div><a [routerLink]="['']" fragment="services">SERVICES & PRICING</a></div>
     <div class="active" 
-      [@linkActivation]="scrollTop >= slides[7].start && scrollTop < slides[9].end ? 'activate' : 'deactivate'">
+      [@linkActivation]="scrollTop >= slides[7].start ? 'activate' : 'deactivate'">
     </div>
   </span>
 </div>
