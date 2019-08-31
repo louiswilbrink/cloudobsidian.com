@@ -2,13 +2,13 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ViewChild, ElementRef, HostListener } from '@angular/core';
 import { fromEvent, interval } from 'rxjs';
 import { throttle } from 'rxjs/operators';
+
 import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'co-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [ScrollService]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollContainer') scrollContainer: ElementRef;
@@ -45,11 +45,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.scrollService.init(this.scrollContainer);
-
-    this.scrollService.getScroll().subscribe(($event) => {
-      console.log('scrolling..', $event.srcElement.scrollTop);
-    });
+    this.scrollService.setScrollElement(this.scrollContainer);
   }
 
   @HostListener('window:resize') onResize() {

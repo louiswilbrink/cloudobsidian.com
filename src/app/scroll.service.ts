@@ -1,21 +1,27 @@
 import { Injectable, ElementRef } from '@angular/core';
-import { Observable, fromEvent, interval } from 'rxjs';
-import { throttle } from 'rxjs/operators';
+import { Observable, from, concat, merge, fromEvent, interval } from 'rxjs';
+import { Subject } from 'rxjs';
+import { throttle, withLatestFrom } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
-  scrollPosition$: Observable<any>;
+  scrollTop$: Subject<number>;
 
-  constructor() { }
-
-  init(scrollElement: ElementRef): void {
-    this.scrollPosition$ = fromEvent(scrollElement.nativeElement, 'scroll')
-      .pipe(throttle(event => interval(150)));
+  constructor() {
+    // Declare a scrollTop subject and push a starting value.
+    this.scrollTop$ = new Subject<number>();
+    this.scrollTop$.next(0); 
   }
 
-  getScroll(): Observable<any> {
-    return this.scrollPosition$;
+  setScrollElement(scrollElement: ElementRef): void {
+    fromEvent(scrollElement.nativeElement, 'scroll')
+      .pipe(throttle((event: Event) => interval(150))) // Wait 150ms between pushing events.
+      .subscribe((event: Event) => this.scrollTop$.next(event.srcElement.scrollTop));
+  }
+
+  getScrollTop(): Observable<number> {
+    return this.scrollTop$;
   }
 }

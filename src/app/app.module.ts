@@ -22,6 +22,7 @@ import { ServicesThreeComponent } from './slides/services-three/services-three.c
 import { ScrollIntoViewDirective } from './scroll-into-view/scroll-into-view.directive';
 import { LogoComponent } from './logo/logo.component';
 import { LeadingBarComponent } from './leading-bar/leading-bar.component';
+import { ScrollService } from './scroll.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,9 @@ import { LeadingBarComponent } from './leading-bar/leading-bar.component';
     AppRoutingModule,
     LottieAnimationViewModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    ScrollService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

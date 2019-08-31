@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
+import { ScrollService } from '../scroll.service';
+
 @Component({
   selector: 'co-logo',
   templateUrl: './logo.component.html',
@@ -23,11 +25,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class LogoComponent implements OnInit {
-  @Input() scrollPosition: number;
+  scrollPosition: number;
   @Input() start: number;
 
-  constructor() { }
+  constructor(private scrollService: ScrollService) {
+    this.scrollPosition = 0;
+  }
 
   ngOnInit() {
+    this.scrollService.getScrollTop().subscribe(($event) => {
+      console.log('logo scrolling..', $event);
+    });
   }
 }
