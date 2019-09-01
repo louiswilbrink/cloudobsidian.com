@@ -1,21 +1,31 @@
 <div id="process" class="slide" [scrollIntoView]="'process'">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Process One</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
+      </div>
+      <div class="text">
+        <h1>Design Sprint</h1>
+        <div class="tags">
+          <span>Week 1</span>
+        </div>
+        <p>Cloud Obsidian is an asset-driven web development studio.  We’ll bring your ideas to life with high-fidelity mockups, wireframes and deployed code early and often.</p>
+        <p>We kick off our application development with a collaborative design sprint.  This informs engineering and delivery milestones so you know exactly how the final product looks & feels.</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>Brainstorm</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Define workflows</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-gantt.svg"/>
+            <span>Deliver low fidelity wireframes</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      3
     </div>
   </div>
 </div>
