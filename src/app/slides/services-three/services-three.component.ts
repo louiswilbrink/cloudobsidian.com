@@ -19,7 +19,7 @@ import { ScrollService } from '../../scroll.service';
       ),
       transition(
         'void => fadeIn, fadeIn => fadeOut, fadeOut => fadeIn', 
-        animate('200ms ease-out')
+        animate('200ms 200ms ease-out')
       ),
     ])
   ]
