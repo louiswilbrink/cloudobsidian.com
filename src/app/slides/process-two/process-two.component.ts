@@ -32,6 +32,12 @@ export class ProcessTwoComponent implements OnInit {
 
   scrollTop: number;
 
+  lottieConfig: {
+    path: string;
+    renderer: string;
+    autoplay: boolean;
+    loop: boolean;
+  }
   constructor(private scrollService: ScrollService) { }
 
   ngOnInit() {
@@ -40,6 +46,13 @@ export class ProcessTwoComponent implements OnInit {
     this.scrollService.getScrollTop().subscribe((scrollTop) => {
       this.scrollTop = scrollTop;
     });
+
+    this.lottieConfig = {
+      path: 'assets/design-sprint.json',
+      renderer: 'svg',
+      autoplay: true,
+      loop: true
+    };
   }
 
 }

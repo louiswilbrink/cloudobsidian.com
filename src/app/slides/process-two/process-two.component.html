@@ -1,21 +1,27 @@
-<div class="slide">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Process Two</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
+<div id="process-two" class="slide" [scrollIntoView]="'process-two'">
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
+      </div>
+      <div class="text">
+        <h1>High Fidelity Mock Ups</h1>
+        <div class="tags">
+          <span>Week 3</span>
+        </div>
+        <p>We'll continue to refine our designs, eventually evolving them into high fidelity (aka very pretty) mock ups and wireframes.</p>
+        <p>We'll also take this time to set up the deployment pipeline and provision cloud infrastructure so that you'll have a live URL to view weekly progress.</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>Deliver high fidelity mock ups</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Provision cloud infrastructure</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      3
     </div>
   </div>
 </div>

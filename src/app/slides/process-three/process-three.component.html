@@ -1,21 +1,27 @@
-<div class="slide">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Process Three</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
+<div id="process-three" class="slide" [scrollIntoView]="'process-three'">
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
+      </div>
+      <div class="text">
+        <h1>Live URL</h1>
+        <div class="tags">
+          <span>Week 6</span>
+        </div>
+        <p>Once design is finalized, we'll engineer the full user interface and deploy it to a live URL.  The product will truly come to life as all buttons, forms and transitions will be fully interactive.</p>
+        <p>At this point, the application is ready to be integrated with a database and backend services.</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>Engineer full user interface</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Deploy to live URL</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      3
     </div>
   </div>
 </div>
