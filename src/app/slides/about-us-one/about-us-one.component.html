@@ -1,5 +1,5 @@
 <div id="about-us" [scrollIntoView]="'about-us'">
-  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
     <div class="content">
       <div class="animation">
         <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>

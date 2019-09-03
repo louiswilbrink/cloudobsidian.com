@@ -1,6 +1,6 @@
 <div id="services" class="slide" [scrollIntoView]="'services'">
   <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
+    [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
     <div class="column">
       <div>1</div>
     </div>

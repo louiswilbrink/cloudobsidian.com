@@ -1,21 +1,29 @@
-<div class="slide">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop <= slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>About Us Three</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
-        </div>
+<div id="about-us-three" [scrollIntoView]="'about-us-three'">
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
       </div>
-    </div>
-    <div class="column">
-      3
+      <div class="text">
+        <h1>Services & Pricing</h1>
+        <p>Our service tiers range from light-weight widgets to full stack development and integration.</p>
+        <p>But rather than making a massive or indefinite dollar commitment, we've separated development into three intuitive tiers:</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>The Mighty Widget</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Design Sprint &amp; UI Build</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-gantt.svg"/>
+            <span>Services &amp; Integration</span>
+          </div>
+        </div>
+        <button type="button">See Services &amp; Pricing</button>
+      </div>
     </div>
   </div>
 </div>

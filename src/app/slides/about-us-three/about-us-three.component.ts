@@ -32,6 +32,13 @@ export class AboutUsThreeComponent implements OnInit {
 
   scrollTop: number;
 
+  lottieConfig: {
+    path: string;
+    renderer: string;
+    autoplay: boolean;
+    loop: boolean;
+  }
+
   constructor(private scrollService: ScrollService) { }
 
   ngOnInit() {
@@ -40,6 +47,12 @@ export class AboutUsThreeComponent implements OnInit {
     this.scrollService.getScrollTop().subscribe((scrollTop) => {
       this.scrollTop = scrollTop;
     });
-  }
 
+    this.lottieConfig = {
+      path: 'assets/maps-and-charts.json',
+      renderer: 'svg',
+      autoplay: true,
+      loop: true
+    };
+  }
 }
