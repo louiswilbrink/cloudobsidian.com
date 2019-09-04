@@ -1,21 +1,33 @@
 <div id="services" class="slide" [scrollIntoView]="'services'">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Services One</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <!--<lottie-animation-view [options]="lottieConfig"></lottie-animation-view>-->
+        <img src="assets/mobile-widgets.png"/>
+      </div>
+      <div class="text">
+        <h1>The Mighty Widget</h1>
+        <div class="tags">
+          <div class="price">$26,000</div>
+          <div class="resources">1 Developer</div>
+        </div>
+        <p>Web components (or widgets) are getting more powerful and flexible.  They get the job done while staying light-weight and easy to maintain.</p>
+        <p>Cloud Obsidian can build a modular component that's ready to interact with your customers or internal team members.  Each engagement will include:</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>Design definition</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Behavior definition</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Database interaction</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      3
     </div>
   </div>
 </div>

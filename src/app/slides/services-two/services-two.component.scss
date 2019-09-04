@@ -1,47 +1,101 @@
-.slide {
+#services-two {
   height: 100vh;
   width: 100%;
   position: relative;
 
-  .grid {
+  .slide {
     height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
+    width: 100%;
     position: fixed;
     top: 0px;
     pointer-events: none;
-    width: 100%;
 
-    .column {
-      width: 40%;
+    .content {
       position: relative;
+      top: 25vh;
+      left: 15vw;
 
-      .content {
-        position: absolute;
-        left: -150px;
-        margin-top: 40%;
+      .animation {
+        width: 500px;
+        display: inline-block;
+        margin-right: 0px;
+        vertical-align: top;
 
         img {
-          width: 250px;
-          height: 350px;
-          display: inline-block;
-          margin-right: 45px;
-          vertical-align: top;
+          width: 400px;
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+      }
+
+      .text {
+        display: inline-block;
+        vertical-align: top;
+
+        h1 {
+          margin: 0px;
         }
 
-        .text {
-          display: inline-block;
-          vertical-align: top;
+        .tags {
+          margin-top: 15px;
+          margin-bottom: 15px;
 
-          h1 {
-            margin: 0px;
-          }
+          div {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 18px;
+            height: 17px;
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
 
-          p {
-            margin-top: 20px;
-            margin-bottom: 20px;
+            &.price {
+              background-color: #f94f21;
+              margin-right: 5px;
+            }
+
+            &.resources {
+              background-color: #4D4D62;
+            }
           }
+        }
+
+        p {
+          width: 300px;
+          font-size: 14px;
+        }
+
+        .bullets {
+
+          .bullet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+
+            img {
+              margin-right: 10px;
+            }
+
+            span {
+            }
+          }
+        }
+
+        button {
+          margin-top: 10px;
+          font-size: 14px;
+          width: 250px;
+          height: 40px;
+          background-color: #F2275A;
+          color: #FFFFFF;
+          border: 0px;
         }
       }
     }

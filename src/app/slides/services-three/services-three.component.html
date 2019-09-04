@@ -1,21 +1,33 @@
-<div class="slide">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Services Three</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
+<div id="services-three" class="slide" [scrollIntoView]="'services-three'">
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <!--<lottie-animation-view [options]="lottieConfig"></lottie-animation-view>-->
+        <img src="assets/mobile-widgets.png"/>
+      </div>
+      <div class="text">
+        <h1>Services &amp; Integration</h1>
+        <div class="tags">
+          <div class="price">$110,000</div>
+          <div class="resources">2 Developers</div>
+        </div>
+        <p>Once the UI interactions are delivered, we move our focus to data interactions.</p>
+        <p>Cloud Obsidian will define a clean API and provision approriate cloud infrastructure.  We'll integrate the services and UI and bring your application to life!</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>Define API &amp; database schema</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Provision cloud infrastructure</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Integrate UI &amp; services</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      3
     </div>
   </div>
 </div>

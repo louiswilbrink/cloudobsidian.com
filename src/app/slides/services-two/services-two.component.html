@@ -1,21 +1,33 @@
-<div class="slide">
-  <div class="grid"
-    [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
-    <div class="column">
-      <div>1</div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="https://placekitten.com/g/300/400"/>
-        <div class="text">
-          <h1>Services Two</h1>
-          <p>description</p>
-          <button type="button">Find out more!</button>
+<div id="services-two" class="slide" [scrollIntoView]="'services-two'">
+  <div class="slide" [@fadeInOut]="scrollTop >= slide.start && scrollTop < slide.end ? 'fadeIn' : 'fadeOut'">
+    <div class="content">
+      <div class="animation">
+        <!--<lottie-animation-view [options]="lottieConfig"></lottie-animation-view>-->
+        <img src="assets/design-sprint.png"/>
+      </div>
+      <div class="text">
+        <h1>User Interface Build</h1>
+        <div class="tags">
+          <div class="price">$45,000</div>
+          <div class="resources">1 Designer &amp; 1 Developer</div>
+        </div>
+        <p>During a one-week, onsite design sprint, Cloud Obsidian explores and defines your application's major workflows.</p>
+        <p>Each week, you'll receive tangible design and engineering assets.  The final product is a fully functioning user interface.</p>
+        <div class="bullets">
+          <div class="bullet">
+            <img src="assets/map.svg"/>
+            <span>Design sprint</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>High fidelity mock ups</span>
+          </div>
+          <div class="bullet">
+            <img src="assets/chart-bar.svg"/>
+            <span>Frontend build &amp; DevOps</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      3
     </div>
   </div>
 </div>
