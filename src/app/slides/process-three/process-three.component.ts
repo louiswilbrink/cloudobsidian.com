@@ -48,12 +48,12 @@ export class ProcessThreeComponent implements OnInit {
       this.scrollTop = scrollTop;
     });
 
-    this.lottieConfig = {
-      path: 'assets/design-sprint.json',
-      renderer: 'svg',
-      autoplay: true,
-      loop: true
-    };
+    //this.lottieConfig = {
+      //path: 'assets/design-sprint.json',
+      //renderer: 'svg',
+      //autoplay: true,
+      //loop: true
+    //};
   }
 
 }
