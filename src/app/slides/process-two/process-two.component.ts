@@ -43,10 +43,6 @@ export class ProcessTwoComponent implements OnInit {
   ngOnInit() {
     this.scrollTop = 0;
 
-    this.scrollService.getScrollTop().subscribe((scrollTop) => {
-      this.scrollTop = scrollTop;
-    });
-
     this.lottieConfig = {
       path: 'assets/design-sprint.json',
       renderer: 'svg',

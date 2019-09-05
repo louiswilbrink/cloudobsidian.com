@@ -36,10 +36,6 @@ export class ServicesOneComponent implements OnInit {
 
   ngOnInit() {
     this.scrollTop = 0;
-
-    this.scrollService.getScrollTop().subscribe((scrollTop) => {
-      this.scrollTop = scrollTop;
-    });
   }
 
 }

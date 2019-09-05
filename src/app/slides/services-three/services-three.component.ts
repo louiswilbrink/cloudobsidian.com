@@ -36,10 +36,6 @@ export class ServicesThreeComponent implements OnInit {
 
   ngOnInit() {
     this.scrollTop = 0;
-
-    this.scrollService.getScrollTop().subscribe((scrollTop) => {
-      this.scrollTop = scrollTop;
-    });
   }
 
 }

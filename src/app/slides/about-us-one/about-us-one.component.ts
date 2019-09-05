@@ -44,10 +44,6 @@ export class AboutUsOneComponent implements OnInit {
   ngOnInit() {
     this.scrollTop = 0;
 
-    this.scrollService.getScrollTop().subscribe((scrollTop) => {
-      this.scrollTop = scrollTop;
-    });
-
     this.lottieConfig = {
       path: 'assets/coders-and-designers.json',
       renderer: 'svg',
