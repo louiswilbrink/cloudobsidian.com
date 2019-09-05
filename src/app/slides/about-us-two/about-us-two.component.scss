@@ -1,15 +1,15 @@
 #about-us-two {
   height: 100vh;
   width: 100%;
-  position: relative;
 
   .slide {
     height: 100%;
     width: 100%;
     pointer-events: none;
+    position: relative;
 
     .content {
-      position: relative;
+      position: absolute;
       top: 25vh;
       left: 15vw;
 
