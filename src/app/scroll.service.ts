@@ -17,7 +17,7 @@ export class ScrollService {
 
   setScrollElement(scrollElement: ElementRef): void {
     fromEvent(scrollElement.nativeElement, 'scroll')
-      .pipe(throttle((event: Event) => interval(150))) // Wait 150ms between pushing events.
+      .pipe(throttle((event: Event) => interval(50))) // Wait 150ms between pushing events.
       .subscribe((event: Event) => this.scrollTop$.next(event.srcElement.scrollTop));
   }
 

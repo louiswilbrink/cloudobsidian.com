@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component'
 import { HomeComponent } from './home/home.component';
 import { LinksComponent } from './links/links.component';
-import { ScrollMonitorDirective } from './scroll-monitor/scroll-monitor.directive';
 import { HomeComponent as HomeSlideComponent } from './slides/home/home.component';
 import { AboutUsOneComponent } from './slides/about-us-one/about-us-one.component';
 import { AboutUsTwoComponent } from './slides/about-us-two/about-us-two.component';
@@ -30,7 +29,6 @@ import { ScrollService } from './scroll.service';
     MenuComponent,
     HomeComponent,
     LinksComponent,
-    ScrollMonitorDirective,
     HomeSlideComponent,
     AboutUsOneComponent,
     AboutUsTwoComponent,
