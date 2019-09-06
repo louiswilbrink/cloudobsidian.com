@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-import { ScrollService } from '../../scroll.service';
-
 @Component({
   selector: 'co-services-three',
   templateUrl: './services-three.component.html',
@@ -25,17 +23,8 @@ import { ScrollService } from '../../scroll.service';
   ]
 })
 export class ServicesThreeComponent implements OnInit {
-  @Input() slide: {
-    start: number;
-    end: number;
-  }
-
-  scrollTop: number;
-  
-  constructor(private scrollService: ScrollService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.scrollTop = 0;
   }
-
 }

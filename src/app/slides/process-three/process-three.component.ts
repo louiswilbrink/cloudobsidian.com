@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-import { ScrollService } from '../../scroll.service';
-
 @Component({
   selector: 'co-process-three',
   templateUrl: './process-three.component.html',
@@ -25,31 +23,9 @@ import { ScrollService } from '../../scroll.service';
   ]
 })
 export class ProcessThreeComponent implements OnInit {
-  @Input() slide: {
-    start: number;
-    end: number;
-  }
 
-  scrollTop: number;
-
-  lottieConfig: {
-    path: string;
-    renderer: string;
-    autoplay: boolean;
-    loop: boolean;
-  }
-  
-  constructor(private scrollService: ScrollService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.scrollTop = 0;
-
-    //this.lottieConfig = {
-      //path: 'assets/design-sprint.json',
-      //renderer: 'svg',
-      //autoplay: true,
-      //loop: true
-    //};
   }
-
 }
