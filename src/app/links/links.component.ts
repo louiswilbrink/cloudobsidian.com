@@ -1,12 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-import { ScrollService } from '../scroll.service';
-
 @Component({
   selector: 'co-links',
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.scss'],
+  providers: [{ 
+    provide: Window, 
+    useValue: window 
+  }],
   animations: [
     trigger('linkActivation', [
       state(
@@ -36,15 +38,8 @@ export class LinksComponent implements OnInit {
     end: number
   }[];
 
-  scrollTop: number;
-
-  constructor(private scrollService: ScrollService) { }
+  constructor(private window: Window) { }
 
   ngOnInit() {
-    this.scrollTop = 0;
-
-    this.scrollService.getScrollTop().subscribe((scrollTop) => {
-      this.scrollTop = scrollTop;
-    });
   }
 }
