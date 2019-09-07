@@ -1,5 +1,11 @@
+@import '../../styles';
+
 .leading-bar {
   width: 30px;
   height: 5px;
-  background-color: #F2275A;
+  background-color: $primary;
+
+  @media screen and (min-width: $tablet) { }
+  @media screen and (min-width: $desktop) { }
+  @media screen and (min-width: $widescreen) { }
 }

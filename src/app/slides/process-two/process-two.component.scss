@@ -1,6 +1,12 @@
+@import '../../../styles';
+
 #process-two {
   height: 100vh;
   width: 100%;
+
+  @media screen and (min-width: $tablet) { }
+  @media screen and (min-width: $desktop) { }
+  @media screen and (min-width: $widescreen) { }
 
   .slide {
     height: 100%;
@@ -8,10 +14,18 @@
     pointer-events: none;
     position: relative;
 
+    @media screen and (min-width: $tablet) { }
+    @media screen and (min-width: $desktop) { }
+    @media screen and (min-width: $widescreen) { }
+
     .content {
       position: absolute;
       top: 25vh;
       left: 15vw;
+
+      @media screen and (min-width: $tablet) { }
+      @media screen and (min-width: $desktop) { }
+      @media screen and (min-width: $widescreen) { }
 
       .animation {
         width: 500px;
@@ -19,10 +33,18 @@
         margin-right: 0px;
         vertical-align: top;
 
+        @media screen and (min-width: $tablet) { }
+        @media screen and (min-width: $desktop) { }
+        @media screen and (min-width: $widescreen) { }
+
         img {
           width: 400px;
           margin-left: 50px;
           margin-right: 50px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
       }
 
@@ -30,8 +52,16 @@
         display: inline-block;
         vertical-align: top;
 
+        @media screen and (min-width: $tablet) { }
+        @media screen and (min-width: $desktop) { }
+        @media screen and (min-width: $widescreen) { }
+
         h1 {
           margin: 0px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         .tags {
@@ -46,15 +76,27 @@
           text-align: center;
           margin-top: 15px;
           margin-bottom: 15px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         p {
           width: 300px;
           font-size: 14px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         .bullets {
 
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
+          
           .bullet {
             display: flex;
             flex-direction: row;
@@ -64,11 +106,23 @@
             margin-bottom: 15px;
             font-size: 14px;
 
+            @media screen and (min-width: $tablet) { }
+            @media screen and (min-width: $desktop) { }
+            @media screen and (min-width: $widescreen) { }
+
             img {
               margin-right: 10px;
+
+              @media screen and (min-width: $tablet) { }
+              @media screen and (min-width: $desktop) { }
+              @media screen and (min-width: $widescreen) { }
             }
 
             span {
+
+              @media screen and (min-width: $tablet) { }
+              @media screen and (min-width: $desktop) { }
+              @media screen and (min-width: $widescreen) { }
             }
           }
         }
@@ -81,6 +135,10 @@
           background-color: #F2275A;
           color: #FFFFFF;
           border: 0px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
       }
     }

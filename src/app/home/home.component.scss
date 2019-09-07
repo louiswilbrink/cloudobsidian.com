@@ -1,2 +1,8 @@
+@import '../../styles';
+
 .home {
+
+  @media screen and (min-width: $tablet) { }
+  @media screen and (min-width: $desktop) { }
+  @media screen and (min-width: $widescreen) { }
 }

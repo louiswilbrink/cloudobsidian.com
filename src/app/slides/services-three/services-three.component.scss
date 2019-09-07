@@ -1,6 +1,12 @@
+@import '../../../styles';
+
 #services-three {
   height: 100vh;
   width: 100%;
+
+  @media screen and (min-width: $tablet) { }
+  @media screen and (min-width: $desktop) { }
+  @media screen and (min-width: $widescreen) { }
 
   .slide {
     height: 100%;
@@ -8,10 +14,18 @@
     pointer-events: none;
     position: relative;
 
+    @media screen and (min-width: $tablet) { }
+    @media screen and (min-width: $desktop) { }
+    @media screen and (min-width: $widescreen) { }
+
     .content {
       position: absolute;
       top: 25vh;
       left: 15vw;
+
+      @media screen and (min-width: $tablet) { }
+      @media screen and (min-width: $desktop) { }
+      @media screen and (min-width: $widescreen) { }
 
       .animation {
         width: 500px;
@@ -19,10 +33,18 @@
         margin-right: 0px;
         vertical-align: top;
 
+        @media screen and (min-width: $tablet) { }
+        @media screen and (min-width: $desktop) { }
+        @media screen and (min-width: $widescreen) { }
+
         img {
           width: 400px;
           margin-left: 50px;
           margin-right: 50px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
       }
 
@@ -30,44 +52,51 @@
         display: inline-block;
         vertical-align: top;
 
+        @media screen and (min-width: $tablet) { }
+        @media screen and (min-width: $desktop) { }
+        @media screen and (min-width: $widescreen) { }
+
         h1 {
           margin: 0px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         .tags {
+          font-weight: 400;
+          line-height: 18px;
+          border-radius: 8px;
+          background-color: #f94f21;
+          height: 17px;
+          width: 70px;
+          color: #FFFFFF;
+          font-size: 12px;
+          text-align: center;
           margin-top: 15px;
           margin-bottom: 15px;
 
-          div {
-            display: inline-block;
-            font-weight: 400;
-            line-height: 18px;
-            height: 17px;
-            border-radius: 8px;
-            color: #FFFFFF;
-            font-size: 12px;
-            text-align: center;
-            padding-left: 10px;
-            padding-right: 10px;
-
-            &.price {
-              background-color: #f94f21;
-              margin-right: 5px;
-            }
-
-            &.resources {
-              background-color: #4D4D62;
-            }
-          }
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         p {
           width: 300px;
           font-size: 14px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         .bullets {
 
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
+          
           .bullet {
             display: flex;
             flex-direction: row;
@@ -77,11 +106,23 @@
             margin-bottom: 15px;
             font-size: 14px;
 
+            @media screen and (min-width: $tablet) { }
+            @media screen and (min-width: $desktop) { }
+            @media screen and (min-width: $widescreen) { }
+
             img {
               margin-right: 10px;
+
+              @media screen and (min-width: $tablet) { }
+              @media screen and (min-width: $desktop) { }
+              @media screen and (min-width: $widescreen) { }
             }
 
             span {
+
+              @media screen and (min-width: $tablet) { }
+              @media screen and (min-width: $desktop) { }
+              @media screen and (min-width: $widescreen) { }
             }
           }
         }
@@ -94,6 +135,10 @@
           background-color: #F2275A;
           color: #FFFFFF;
           border: 0px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
       }
     }

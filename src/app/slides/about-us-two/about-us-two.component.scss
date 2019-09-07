@@ -1,6 +1,12 @@
+@import '../../../styles';
+
 #about-us-two {
   height: 100vh;
   width: 100%;
+
+  @media screen and (min-width: $tablet) { }
+  @media screen and (min-width: $desktop) { }
+  @media screen and (min-width: $widescreen) { }
 
   .slide {
     height: 100%;
@@ -8,32 +14,60 @@
     pointer-events: none;
     position: relative;
 
+    @media screen and (min-width: $tablet) { }
+    @media screen and (min-width: $desktop) { }
+    @media screen and (min-width: $widescreen) { }
+
     .content {
       position: absolute;
       top: 25vh;
       left: 15vw;
+
+      @media screen and (min-width: $tablet) { }
+      @media screen and (min-width: $desktop) { }
+      @media screen and (min-width: $widescreen) { }
 
       .animation {
         width: 500px;
         display: inline-block;
         margin-right: 0px;
         vertical-align: top;
+
+        @media screen and (min-width: $tablet) { }
+        @media screen and (min-width: $desktop) { }
+        @media screen and (min-width: $widescreen) { }
       }
 
       .text {
         display: inline-block;
         vertical-align: top;
 
+        @media screen and (min-width: $tablet) { }
+        @media screen and (min-width: $desktop) { }
+        @media screen and (min-width: $widescreen) { }
+
         h1 {
           margin: 0px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         p {
           width: 300px;
           font-size: 14px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
 
         .bullets {
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
 
           .bullet {
             display: flex;
@@ -43,12 +77,24 @@
             align-items: center;
             margin-bottom: 15px;
 
+            @media screen and (min-width: $tablet) { }
+            @media screen and (min-width: $desktop) { }
+            @media screen and (min-width: $widescreen) { }
+
             img {
               margin-right: 10px;
+
+              @media screen and (min-width: $tablet) { }
+              @media screen and (min-width: $desktop) { }
+              @media screen and (min-width: $widescreen) { }
             }
 
             span {
               font-size: 14px;
+
+              @media screen and (min-width: $tablet) { }
+              @media screen and (min-width: $desktop) { }
+              @media screen and (min-width: $widescreen) { }
             }
           }
         }
@@ -61,6 +107,10 @@
           background-color: #F2275A;
           color: #FFFFFF;
           border: 0px;
+
+          @media screen and (min-width: $tablet) { }
+          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $widescreen) { }
         }
       }
     }

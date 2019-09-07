@@ -1,10 +1,12 @@
+@import '../../styles';
+
 #menusvg {
   width: 140px;
   height: 140px;
   overflow: visible;
 
   .top{
-    fill:#00A651;
+    fill: $dark-gray;
   }
 }
 
