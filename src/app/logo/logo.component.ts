@@ -28,7 +28,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class LogoComponent implements OnInit {
   @Input() start: number;
-
+  
   constructor(private window: Window) { }
 
   ngOnInit() {

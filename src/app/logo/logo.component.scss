@@ -1,21 +1,35 @@
 @import '../../styles';
 
 .logo {
-  position: fixed;
-  top: 30px;
-  left: 38px;
   pointer-events: none;
   z-index: 10;
+  text-align: center;
+  margin-top: 12px;
 
-  @media screen and (min-width: $tablet) { }
-  @media screen and (min-width: $desktop) { }
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    left: 38px;
+  }
+
   @media screen and (min-width: $widescreen) { }
 
   img {
     width: 150px;
 
-    @media screen and (min-width: $tablet) { }
-    @media screen and (min-width: $desktop) { }
+    @media screen and (min-width: $tablet) {
+      width: 100px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 150px;
+    }
+
     @media screen and (min-width: $widescreen) { }
   }
 }
