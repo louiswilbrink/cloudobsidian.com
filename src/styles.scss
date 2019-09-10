@@ -25,6 +25,11 @@ $iphone-x: "only screen
   and (device-height : 812px) 
   and (-webkit-device-pixel-ratio : 3) { }";
 
+$ipad: "only screen 
+  and (device-width : 768px) 
+  and (device-height : 1024px) 
+  and (orientation : portrait) { }";
+
 /* Colors */
 $primary: #F2275A;   // Pink
 $secondary: #3913A0; // Purple

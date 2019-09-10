@@ -1,11 +1,19 @@
 @import '../../../styles';
 
 #about-us {
-  height: 100vh;
-  width: 100%;
 
   @media screen and (min-width: $tablet) { }
-  @media screen and (min-width: $desktop) { }
+
+  @media #{$ipad} {
+    height: 100vh;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 100vh;
+    width: 100%;
+  }
+
   @media screen and (min-width: $widescreen) { }
 
   .slide {
@@ -21,10 +29,19 @@
     .content {
       position: relative;
       width: 100%;
+      padding-bottom: 20px;
+
+      @media #{$iphone-x} {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
 
       @media screen and (min-width: $tablet) {
-        position: absolute;
-        top: 20vh;
+        padding-top: 20px;
+      }
+
+      @media #{$ipad} {
+        padding-top: 180px;
       }
 
       @media screen and (min-width: $desktop) {
