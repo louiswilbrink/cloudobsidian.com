@@ -23,6 +23,8 @@
       width: 100%;
 
       @media screen and (min-width: $tablet) {
+        position: absolute;
+        top: 20vh;
       }
 
       @media screen and (min-width: $desktop) {
@@ -32,23 +34,50 @@
         width: auto;
       }
 
+      @media screen and (min-width: $landscape) {
+        left: 6vw;
+      }
+
       @media screen and (min-width: $widescreen) {
-        position: absolute;
-        top: 25vh;
-        left: 10vw;
+        left: 8vw;
       }
 
       .animation {
         width: 100%;
         display: block;
+        padding-top: 20px;
 
-        @media screen and (min-width: $tablet) { }
+        @media only screen
+          and (device-width : 414px)
+          and (device-height : 736px)
+          and (-webkit-device-pixel-ratio : 3) {
+
+          padding-top: 30px;
+        }
+
+        @media only screen
+          and (device-width : 375px)
+          and (device-height : 812px)
+          and (-webkit-device-pixel-ratio : 3) {
+          padding-top: 50px;
+        }
+
+        @media screen and (min-width: $tablet) {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 0px;
+        }
 
         @media screen and (min-width: $desktop) {
           width: 300px;
           display: inline-block;
           margin-right: 0px;
           vertical-align: top;
+        }
+
+        @media screen and (min-width: $landscape) {
+          width: 400px;
         }
 
         @media screen and (min-width: $widescreen) {
@@ -61,8 +90,12 @@
         width: 70%;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 20px;
 
         @media screen and (min-width: $tablet) {
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         @media screen and (min-width: $desktop) {
@@ -73,7 +106,9 @@
           margin-right: 0px;
         }
 
-        @media screen and (min-width: $widescreen) { }
+        @media screen and (min-width: $widescreen) {
+          width: 440px;
+        }
 
         h1 {
           margin: 0px;
@@ -96,7 +131,10 @@
           @media screen and (min-width: $tablet) {
           }
           
-          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $desktop) {
+            width: 300px;
+          }
+
           @media screen and (min-width: $widescreen) { }
         }
 
@@ -117,7 +155,7 @@
           }
 
           @media screen and (min-width: $widescreen) {
-            width: 300px;
+            width: 280px;
           }
         }
       }
