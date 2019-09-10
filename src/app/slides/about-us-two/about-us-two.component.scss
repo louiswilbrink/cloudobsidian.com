@@ -36,6 +36,7 @@
       }
 
       @media screen and (min-width: $desktop) {
+        padding-top: 0px;
         position: absolute;
         top: 25vh;
         left: 5vw;
@@ -115,6 +116,7 @@
           vertical-align: top;
           margin-left: 20px;
           margin-right: 0px;
+          padding-top: 0px;
         }
 
         @media screen and (min-width: $widescreen) {

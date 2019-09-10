@@ -1,12 +1,21 @@
 @import '../../../styles';
 
+
 #process {
-  height: 100vh;
-  width: 100%;
 
   @media screen and (min-width: $tablet) { }
-  @media screen and (min-width: $desktop) { }
+
+  @media screen and (min-width: $desktop) {
+    height: 100vh;
+    width: 100%;
+  }
+
   @media screen and (min-width: $widescreen) { }
+
+  @media #{$ipad} {
+    height: 100vh;
+    width: 100%;
+  }
 
   .slide {
     height: 100%;
@@ -19,39 +28,114 @@
     @media screen and (min-width: $widescreen) { }
 
     .content {
-      position: absolute;
-      top: 25vh;
-      left: 15vw;
+      position: relative;
+      width: 100%;
+      padding-bottom: 20px;
 
-      @media screen and (min-width: $tablet) { }
-      @media screen and (min-width: $desktop) { }
-      @media screen and (min-width: $widescreen) { }
+      @media screen and (min-width: $tablet) {
+        padding-top: 20px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        padding-top: 0px;
+        position: absolute;
+        top: 25vh;
+        left: 5vw;
+        width: auto;
+      }
+
+      @media screen and (min-width: $landscape) {
+        left: 6vw;
+      }
+
+      @media screen and (min-width: $widescreen) {
+        left: 8vw;
+      }
+
+      @media #{$iphone-x} {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      @media #{$ipad} {
+        padding-top: 180px;
+      }
 
       .animation {
-        width: 500px;
-        display: inline-block;
-        margin-right: 0px;
-        vertical-align: top;
+        width: 100%;
+        display: block;
+        padding-top: 20px;
 
-        @media screen and (min-width: $tablet) { }
-        @media screen and (min-width: $desktop) { }
-        @media screen and (min-width: $widescreen) { }
+        @media screen and (min-width: $tablet) {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 0px;
+        }
+
+        @media screen and (min-width: $desktop) {
+          width: 300px;
+          display: inline-block;
+          margin-right: 0px;
+          vertical-align: top;
+        }
+
+        @media screen and (min-width: $landscape) {
+          width: 400px;
+        }
+
+        @media screen and (min-width: $widescreen) {
+          width: 500px;
+        }
+
+        @media #{$iphone-plus} {
+          padding-top: 30px;
+        }
+
+        @media #{$iphone-x} {
+          padding-top: 50px;
+        }
       }
 
       .text {
-        display: inline-block;
-        vertical-align: top;
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
 
-        @media screen and (min-width: $tablet) { }
-        @media screen and (min-width: $desktop) { }
-        @media screen and (min-width: $widescreen) { }
+        @media screen and (min-width: $tablet) {
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media screen and (min-width: $desktop) {
+          max-width: inherit;
+          display: inline-block;
+          width: 350px;
+          vertical-align: top;
+          margin-left: 20px;
+          margin-right: 0px;
+          padding-top: 0px;
+        }
+
+        @media screen and (min-width: $widescreen) {
+          width: 440px;
+        }
 
         h1 {
           margin: 0px;
 
           @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+
+          @media screen and (min-width: $desktop) {
+            font-size: 28px;
+          }
+
+          @media screen and (min-width: $widescreen) {
+            font-size: 36px;
+          }
         }
 
         .tags {
@@ -73,11 +157,16 @@
         }
 
         p {
-          width: 300px;
+          width: 100%;
           font-size: 14px;
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
+          @media screen and (min-width: $tablet) {
+          }
+          
+          @media screen and (min-width: $desktop) {
+            width: 300px;
+          }
+
           @media screen and (min-width: $widescreen) { }
         }
 
@@ -94,7 +183,6 @@
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 15px;
-            font-size: 14px;
 
             @media screen and (min-width: $tablet) { }
             @media screen and (min-width: $desktop) { }
@@ -109,6 +197,8 @@
             }
 
             span {
+              font-size: 14px;
+
               @media screen and (min-width: $tablet) { }
               @media screen and (min-width: $desktop) { }
               @media screen and (min-width: $widescreen) { }
@@ -119,15 +209,22 @@
         button {
           margin-top: 10px;
           font-size: 14px;
-          width: 250px;
+          width: 100%;
           height: 40px;
-          background-color: #F2275A;
-          color: #FFFFFF;
+          background-color: $primary;
+          color: $white;
           border: 0px;
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+          @media screen and (min-width: $tablet) {
+          }
+
+          @media screen and (min-width: $desktop) {
+            width: 250px;
+          }
+
+          @media screen and (min-width: $widescreen) {
+            width: 280px;
+          }
         }
       }
     }
