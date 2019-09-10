@@ -30,6 +30,21 @@ $ipad: "only screen
   and (device-height : 1024px) 
   and (orientation : portrait) { }";
 
+$ipad-landscape: "only screen 
+  and (device-width : 1024px) 
+  and (device-height : 768px) 
+  and (orientation : landscape) { }";
+
+$ipad-pro: "only screen 
+  and (device-width : 1024px) 
+  and (device-height : 1366px) 
+  and (orientation : portrait) { }";
+
+$ipad-pro-landscape: "only screen 
+  and (device-width : 1366px) 
+  and (device-height : 1024px) 
+  and (orientation : landscape) { }";
+
 /* Colors */
 $primary: #F2275A;   // Pink
 $secondary: #3913A0; // Purple
