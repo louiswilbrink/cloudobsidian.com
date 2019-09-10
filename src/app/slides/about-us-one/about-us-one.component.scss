@@ -31,17 +31,8 @@
       width: 100%;
       padding-bottom: 20px;
 
-      @media #{$iphone-x} {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-
       @media screen and (min-width: $tablet) {
         padding-top: 20px;
-      }
-
-      @media #{$ipad} {
-        padding-top: 180px;
       }
 
       @media screen and (min-width: $desktop) {
@@ -57,6 +48,15 @@
 
       @media screen and (min-width: $widescreen) {
         left: 8vw;
+      }
+
+      @media #{$iphone-x} {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      @media #{$ipad} {
+        padding-top: 180px;
       }
 
       .animation {
@@ -109,6 +109,7 @@
         }
 
         @media screen and (min-width: $desktop) {
+          max-width: inherit;
           display: inline-block;
           width: 350px;
           vertical-align: top;
