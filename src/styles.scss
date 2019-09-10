@@ -8,12 +8,18 @@ $desktop: 823px;
 $landscape: 1024px;
 $widescreen: 1280px;
 
-$small: 414px;       // x736px (Plus sized phones)
-$medium: 768px;      // x1024px (Portrait tablets)
-$large: 1280px;      // x900px (MacBook 12")
-$larger: 1440px;     // x900px (MacBook Pro 15")
-$wide: 1680px;       // x1050px (MacBook Pro 15" Hi Res)
-$ultra-wide: 1920px; // x1080px (Desktop monitors)
+// 414x736 (Plus sized phones)
+$small: "only screen and (min-width: 415px) {}";
+// 768x1024px (Portrait tablets)
+$medium: "only screen and (min-width: 769px) {}";
+// 1280x900px (MacBook 12")
+$large: "only screen and (min-width: 1281px) {}";
+// 1440x900px (MacBook Pro 15")
+$larger: "only screen and (min-width: 1441px) {}";
+// 1680x1050px (MacBook Pro 15" Hi Res)
+$wide: "only screen and (min-width: 1681px) {}";
+// 1920x1080px (Desktop Monitors)
+$ultra-wide: "only screen and (min-width: 1921px) {}";
 
 $iphone: "only screen 
   and (device-width : 375px) 
