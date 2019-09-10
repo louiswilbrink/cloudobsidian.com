@@ -47,18 +47,11 @@
         display: block;
         padding-top: 20px;
 
-        @media only screen
-          and (device-width : 414px)
-          and (device-height : 736px)
-          and (-webkit-device-pixel-ratio : 3) {
-
+        @media #{$iphone-plus} {
           padding-top: 30px;
         }
 
-        @media only screen
-          and (device-width : 375px)
-          and (device-height : 812px)
-          and (-webkit-device-pixel-ratio : 3) {
+        @media #{$iphone-x} {
           padding-top: 50px;
         }
 

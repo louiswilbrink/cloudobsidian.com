@@ -10,17 +10,17 @@ $landscape: 1024px;
 $widescreen: 1280px;
 /* $ultra: 1440px; */
 
-$iphone: "@media only screen 
+$iphone: "only screen 
   and (device-width : 375px) 
   and (device-height : 667px) 
   and (-webkit-device-pixel-ratio : 2) { }";
 
-$iphone-plus: "@media only screen 
+$iphone-plus: "only screen 
   and (device-width : 414px) 
   and (device-height : 736px) 
   and (-webkit-device-pixel-ratio : 3) { }";
 
-$iphone-x: "@media only screen 
+$iphone-x: "only screen 
   and (device-width : 375px) 
   and (device-height : 812px) 
   and (-webkit-device-pixel-ratio : 3) { }";
