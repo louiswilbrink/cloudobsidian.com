@@ -23,9 +23,21 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class ProcessThreeComponent implements OnInit {
+  lottieConfig: {
+    path: string;
+    renderer: string;
+    autoplay: boolean;
+    loop: boolean;
+  }
 
   constructor() { }
 
   ngOnInit() {
+    this.lottieConfig = {
+      path: 'assets/live-url.json',
+      renderer: 'svg',
+      autoplay: true,
+      loop: true
+    };
   }
 }

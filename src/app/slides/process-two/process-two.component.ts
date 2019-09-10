@@ -23,9 +23,21 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class ProcessTwoComponent implements OnInit {
+  lottieConfig: {
+    path: string;
+    renderer: string;
+    autoplay: boolean;
+    loop: boolean;
+  }
 
   constructor() { }
 
   ngOnInit() {
+    this.lottieConfig = {
+      path: 'assets/high-fidelity-mock-ups.json',
+      renderer: 'svg',
+      autoplay: true,
+      loop: true
+    };
   }
 }

@@ -4,17 +4,17 @@
 
   @media screen and (min-width: $tablet) { }
 
-  @media #{$ipad} {
-    height: 100vh;
-    width: 100%;
-  }
-
   @media screen and (min-width: $desktop) {
     height: 100vh;
     width: 100%;
   }
 
   @media screen and (min-width: $widescreen) { }
+
+  @media #{$ipad} {
+    height: 100vh;
+    width: 100%;
+  }
 
   .slide {
     height: 100%;
@@ -31,17 +31,8 @@
       width: 100%;
       padding-bottom: 20px;
 
-      @media #{$iphone-x} {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-
       @media screen and (min-width: $tablet) {
         padding-top: 20px;
-      }
-
-      @media #{$ipad} {
-        padding-top: 180px;
       }
 
       @media screen and (min-width: $desktop) {
@@ -59,18 +50,19 @@
         left: 8vw;
       }
 
+      @media #{$iphone-x} {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      @media #{$ipad} {
+        padding-top: 180px;
+      }
+
       .animation {
         width: 100%;
         display: block;
         padding-top: 20px;
-
-        @media #{$iphone-plus} {
-          padding-top: 30px;
-        }
-
-        @media #{$iphone-x} {
-          padding-top: 50px;
-        }
 
         @media screen and (min-width: $tablet) {
           max-width: 500px;
@@ -92,6 +84,14 @@
 
         @media screen and (min-width: $widescreen) {
           width: 500px;
+        }
+
+        @media #{$iphone-plus} {
+          padding-top: 30px;
+        }
+
+        @media #{$iphone-x} {
+          padding-top: 50px;
         }
       }
 
