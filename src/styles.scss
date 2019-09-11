@@ -36,6 +36,12 @@ $iphone-x: "only screen
   and (device-height : 812px) 
   and (-webkit-device-pixel-ratio : 3) { }";
 
+$iphone-x-landscape: "only screen 
+  and (device-width : 812px) 
+  and (device-height : 375px) 
+  and (-webkit-device-pixel-ratio : 3) 
+  and (orientation : landscape) { }";
+
 $ipad: "only screen 
   and (device-width : 768px) 
   and (device-height : 1024px) 

@@ -2,14 +2,10 @@
 
 #about-us {
 
-  @media screen and (min-width: $tablet) { }
-
   @media screen and (min-width: $desktop) {
     height: 100vh;
     width: 100%;
   }
-
-  @media screen and (min-width: $widescreen) { }
 
   @media #{$ipad} {
     height: 100vh;
@@ -21,10 +17,6 @@
     width: 100%;
     pointer-events: none;
     position: relative;
-
-    @media screen and (min-width: $tablet) { }
-    @media screen and (min-width: $desktop) { }
-    @media screen and (min-width: $widescreen) { }
 
     .content {
       position: relative;
