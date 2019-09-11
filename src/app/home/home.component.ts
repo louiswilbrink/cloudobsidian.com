@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent, interval } from 'rxjs';
-import { throttle } from 'rxjs/operators';
 
 @Component({
   selector: 'co-home',
