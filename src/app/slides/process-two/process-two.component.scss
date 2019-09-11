@@ -1,12 +1,21 @@
 @import '../../../styles';
 
 #process-two {
-  height: 100vh;
-  width: 100%;
 
-  @media screen and (min-width: $tablet) { }
-  @media screen and (min-width: $desktop) { }
-  @media screen and (min-width: $widescreen) { }
+  @media #{$small} {
+    height: 100vh;
+    width: 100%;
+  }
+
+  @media #{$ipad} {
+    height: 100vh;
+    width: 100%;
+  }
+
+  @media #{$ipad-pro} {
+    height: 100vh;
+    width: 100%;
+  }
 
   .slide {
     height: 100%;
@@ -14,88 +23,266 @@
     pointer-events: none;
     position: relative;
 
-    @media screen and (min-width: $tablet) { }
-    @media screen and (min-width: $desktop) { }
-    @media screen and (min-width: $widescreen) { }
-
     .content {
-      position: absolute;
-      top: 25vh;
-      left: 15vw;
+      position: relative;
+      width: 100%;
+      padding-bottom: 20px;
 
-      @media screen and (min-width: $tablet) { }
-      @media screen and (min-width: $desktop) { }
-      @media screen and (min-width: $widescreen) { }
+      @media #{$small} {
+        padding-top: 20px;
+      }
+
+      @media #{$medium} {
+        position: absolute;
+        top: 24vh;
+        left: 5vw;
+        width: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media #{$large} {
+        left: 6vw;
+      }
+
+      @media #{$larger} {
+        left: 8vw;
+      }
+
+      @media #{$iphone-x} {
+        position: relative;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        top: 0;
+        left: 0;
+      }
+
+      @media #{$iphone-x-landscape} {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      @media #{$ipad} {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 150px;
+        padding-bottom: 0px;
+      }
+
+      @media #{$ipad-landscape} {
+        position: absolute;
+        top: 24vh;
+        left: 5vw;
+        width: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media #{$ipad-pro} {
+        position: relative;
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 0px;
+        top: 0;
+        left: 0;
+      }
+
+      @media #{$ipad-pro-landscape} {
+        position: absolute;
+        top: 27vh;
+        left: 5vw;
+        width: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
 
       .animation {
-        width: 500px;
-        display: inline-block;
-        margin-right: 0px;
-        vertical-align: top;
+        display: block;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
 
-        @media screen and (min-width: $tablet) { }
-        @media screen and (min-width: $desktop) { }
-        @media screen and (min-width: $widescreen) { }
+        @media #{$small} {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
 
-        img {
-          width: 400px;
-          margin-left: 50px;
-          margin-right: 50px;
+        @media #{$medium} {
+          max-width: 500px;
+          display: inline-block;
+          width: 450px;
+          vertical-align: top;
+          padding-top: 10px;
+        }
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+        @media #{$large} {
+          max-width: 500px;
+          width: 500px;
+        }
+
+        @media #{$larger} {
+          max-width: none;
+          width: 650px;
+          padding-top: 0px;
+        }
+
+        @media #{$iphone-plus} {
+          max-width: none;
+          padding-top: 30px;
+        }
+
+        @media #{$iphone-x} {
+          max-width: none;
+          padding-top: 50px;
+        }
+        
+        @media #{$iphone-x-landscape} {
+          display: block;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+        @media #{$ipad} {
+          max-width: none;
+          display: block;
+          width: 550px;
+          vertical-align: inherit;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+        @media #{$ipad-pro} {
+          max-width: none;
+          display: block;
+          width: 750px;
+          vertical-align: inherit;
+          padding-left: 0px;
+          padding-right: 0px;
         }
       }
 
       .text {
-        display: inline-block;
-        vertical-align: top;
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
 
-        @media screen and (min-width: $tablet) { }
-        @media screen and (min-width: $desktop) { }
-        @media screen and (min-width: $widescreen) { }
+        @media #{$small} {
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media #{$medium} {
+          max-width: none;
+          display: inline-block;
+          width: 350px;
+          vertical-align: top;
+          margin-left: 20px;
+          margin-right: 0px;
+          padding-top: 0px;
+        }
+
+        @media #{$large} {
+          width: 440px;
+        }
+
+        @media #{$larger} {
+          padding-top: 15px;
+        }
+
+        @media #{$iphone-x-landscape} {
+          display: block;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+        @media #{$ipad} {
+          max-width: none;
+          display: block;
+          width: 400px;
+          vertical-align: inherit;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media #{$ipad-pro} {
+          max-width: none;
+          display: block;
+          width: 400px;
+          vertical-align: inherit;
+          margin-left: auto;
+          margin-right: auto;
+        }
 
         h1 {
           margin: 0px;
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+          @media #{$medium} {
+            font-size: 28px;
+          }
+
+          @media #{$large} {
+            font-size: 36px;
+          }
         }
 
         .tags {
-          font-weight: 400;
-          line-height: 18px;
-          border-radius: 8px;
-          background-color: #f94f21;
-          height: 17px;
-          width: 70px;
-          color: #FFFFFF;
-          font-size: 12px;
-          text-align: center;
-          margin-top: 15px;
-          margin-bottom: 15px;
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+          div {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 18px;
+            border-radius: 8px;
+            height: 17px;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
+          .price {
+            background-color: $accent;
+          }
+
+          .resources {
+            margin-left: 10px;
+            background-color: $dark-gray;
+          }
         }
 
         p {
-          width: 300px;
+          width: 100%;
           font-size: 14px;
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+          @media #{$medium} {
+            max-width: 350px;
+          }
         }
 
         .bullets {
-
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
           
           .bullet {
             display: flex;
@@ -104,25 +291,13 @@
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 15px;
-            font-size: 14px;
-
-            @media screen and (min-width: $tablet) { }
-            @media screen and (min-width: $desktop) { }
-            @media screen and (min-width: $widescreen) { }
 
             img {
               margin-right: 10px;
-
-              @media screen and (min-width: $tablet) { }
-              @media screen and (min-width: $desktop) { }
-              @media screen and (min-width: $widescreen) { }
             }
 
             span {
-
-              @media screen and (min-width: $tablet) { }
-              @media screen and (min-width: $desktop) { }
-              @media screen and (min-width: $widescreen) { }
+              font-size: 14px;
             }
           }
         }
@@ -130,15 +305,19 @@
         button {
           margin-top: 10px;
           font-size: 14px;
-          width: 250px;
+          width: 100%;
           height: 40px;
-          background-color: #F2275A;
-          color: #FFFFFF;
+          background-color: $primary;
+          color: $white;
           border: 0px;
 
-          @media screen and (min-width: $tablet) { }
-          @media screen and (min-width: $desktop) { }
-          @media screen and (min-width: $widescreen) { }
+          @media #{$medium} {
+            width: 250px;
+          }
+
+          @media #{$large} {
+            width: 280px;
+          }
         }
       }
     }
