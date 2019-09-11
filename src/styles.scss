@@ -26,9 +26,19 @@ $iphone: "only screen
   and (device-height : 667px) 
   and (-webkit-device-pixel-ratio : 2) { }";
 
+$iphone-landscape: "only screen 
+  and (device-width : 667px) 
+  and (device-height : 375px) 
+  and (-webkit-device-pixel-ratio : 2) { }";
+
 $iphone-plus: "only screen 
   and (device-width : 414px) 
   and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3) { }";
+
+$iphone-plus-landscape: "only screen 
+  and (device-width : 736px) 
+  and (device-height : 414px) 
   and (-webkit-device-pixel-ratio : 3) { }";
 
 $iphone-x: "only screen 

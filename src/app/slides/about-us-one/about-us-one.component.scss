@@ -1,20 +1,31 @@
 @import '../../../styles';
 
 #about-us {
+  height: auto;
+  width: 100%;
 
   @media #{$small} {
     height: 100vh;
-    width: 100%;
+  }
+
+  @media #{$iphone-landscape} {
+    height: auto;
+  }
+
+  @media #{$iphone-plus-landscape} {
+    height: auto;
+  }
+
+  @media #{$iphone-x-landscape} {
+    height: auto;
   }
 
   @media #{$ipad} {
     height: 100vh;
-    width: 100%;
   }
 
   @media #{$ipad-pro} {
     height: 100vh;
-    width: 100%;
   }
 
   .slide {
@@ -247,6 +258,8 @@
         }
 
         .tags {
+          padding-top: 15px;
+          padding-bottom: 3px;
 
           div {
             display: inline-block;
@@ -257,19 +270,17 @@
             color: #FFFFFF;
             font-size: 12px;
             text-align: center;
-            margin-top: 15px;
-            margin-bottom: 3px;
             padding-left: 15px;
             padding-right: 15px;
           }
 
-          .price {
+          .accent {
             background-color: $accent;
-          }
+            margin-right: 10px;
 
-          .resources {
-            margin-left: 10px;
-            background-color: $dark-gray;
+            &.secondary {
+              background-color: $dark-gray;
+            }
           }
         }
 
