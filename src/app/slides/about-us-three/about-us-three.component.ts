@@ -34,7 +34,7 @@ export class AboutUsThreeComponent implements OnInit {
 
   ngOnInit() {
     this.lottieConfig = {
-      path: 'assets/maps-and-charts.json',
+      path: 'assets/live-url.json',
       renderer: 'svg',
       autoplay: true,
       loop: true

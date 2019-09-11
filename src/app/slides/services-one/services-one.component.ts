@@ -34,7 +34,7 @@ export class ServicesOneComponent implements OnInit {
 
   ngOnInit() {
     this.lottieConfig = {
-      path: 'assets/coders-and-designers.json',
+      path: 'assets/mobile-widgets.json',
       renderer: 'svg',
       autoplay: true,
       loop: true
