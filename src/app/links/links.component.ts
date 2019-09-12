@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'co-links',
@@ -38,7 +39,10 @@ export class LinksComponent implements OnInit {
     end: number
   }[];
 
-  constructor(private window: Window) { }
+  constructor(
+    private window: Window,
+    route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
   }
