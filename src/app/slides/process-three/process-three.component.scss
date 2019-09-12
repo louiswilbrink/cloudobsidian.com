@@ -8,23 +8,17 @@
     height: 100vh;
   }
 
-  @media #{$iphone-landscape} {
+  @media 
+    #{$iphone-landscape},
+    #{$iphone-plus-landscape},
+    #{$iphone-x-landscape},
+    #{$iphone-xr-landscape},
+    #{$iphone-xs-landscape},
+    #{$iphone-xs-max-landscape} {
     height: auto;
   }
 
-  @media #{$iphone-plus-landscape} {
-    height: auto;
-  }
-
-  @media #{$iphone-x-landscape} {
-    height: auto;
-  }
-
-  @media #{$ipad} {
-    height: 100vh;
-  }
-
-  @media #{$ipad-pro} {
+  @media #{$ipad}, #{$ipad-pro} {
     height: 100vh;
   }
 
@@ -60,16 +54,28 @@
         left: 8vw;
       }
 
-      @media #{$iphone-x} {
+      @media 
+        #{$iphone},
+        #{$iphone-plus},
+        #{$iphone-x},
+        #{$iphone-xr},
+        #{$iphone-xs},
+        #{$iphone-xs-max} {
         position: relative;
+        top: 0;
+        left: 0;
         width: 100%;
         padding-top: 40px;
         padding-bottom: 20px;
-        top: 0;
-        left: 0;
       }
 
-      @media #{$iphone-x-landscape} {
+      @media 
+        #{$iphone-landscape},
+        #{$iphone-plus-landscape},
+        #{$iphone-x-landscape},
+        #{$iphone-xr-landscape},
+        #{$iphone-xs-landscape},
+        #{$iphone-xs-max-landscape} {
         position: relative;
         top: 0;
         left: 0;
@@ -147,17 +153,30 @@
           padding-top: 0px;
         }
 
+        @media #{$iphone} {
+          max-width: none;
+          padding-top: 20px;
+        }
+
         @media #{$iphone-plus} {
           max-width: none;
           padding-top: 30px;
         }
 
-        @media #{$iphone-x} {
+        @media 
+          #{$iphone-x},
+          #{$iphone-xr},
+          #{$iphone-xs},
+          #{$iphone-xs-max} {
           max-width: none;
           padding-top: 50px;
         }
         
-        @media #{$iphone-x-landscape} {
+        @media 
+          #{$iphone-x-landscape},
+          #{$iphone-xr-landscape},
+          #{$iphone-xs-landscape},
+          #{$iphone-xs-max-landscape} {
           display: block;
           max-width: 500px;
           margin-left: auto;
@@ -217,7 +236,11 @@
           padding-top: 15px;
         }
 
-        @media #{$iphone-x-landscape} {
+        @media 
+          #{$iphone-x-landscape},
+          #{$iphone-xr-landscape},
+          #{$iphone-xs-landscape},
+          #{$iphone-xs-max-landscape} {
           display: block;
           max-width: 500px;
           margin-left: auto;
