@@ -343,7 +343,11 @@
           height: 40px;
           background-color: $primary;
           color: $white;
-          border: 0px;
+          pointer-events: auto;
+
+          &:hover {
+            background-color: $accent;
+          }
 
           @media #{$medium} {
             width: 250px;
