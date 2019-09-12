@@ -25,7 +25,6 @@
   .slide {
     height: 100%;
     width: 100%;
-    pointer-events: none;
     position: relative;
 
     .content {
@@ -212,6 +211,13 @@
         margin-right: auto;
         padding-top: 20px;
 
+        .page-one {
+        }
+
+        .page-two {
+          margin-top: 14px;
+        }
+
         @media #{$small} {
           max-width: 400px;
           margin-left: auto;
@@ -343,7 +349,6 @@
           height: 40px;
           background-color: $primary;
           color: $white;
-          pointer-events: auto;
 
           &:hover {
             background-color: $accent;
