@@ -6,23 +6,31 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './about-us-two.component.html',
   styleUrls: ['./about-us-two.component.scss'],
 	animations: [
-    trigger('fadeInOut', [
+    trigger('slideUpDown', [
       state(
-        'fadeIn', 
-        style({ opacity: '1' })
+        'slideUp',
+        style({
+          opacity: 1,
+          transform: 'translateY(40px)'
+        })
       ),
       state(
-        'fadeOut', 
-        style({ opacity: '0' })
+        'slideDown',
+        style({
+          opacity: 0,
+          transform: 'translateY(80px)'
+        })
       ),
       transition(
-        'void => fadeIn, fadeIn => fadeOut, fadeOut => fadeIn', 
-        animate('200ms 200ms ease-out')
-      ),
+        'void => slideUp, slideUp => slideDown, slideDown => slideUp',
+        animate('200ms ease-out')
+      )
     ])
   ]
 })
 export class AboutUsTwoComponent implements OnInit {
+  isFullListDisplayed: boolean;
+
   lottieConfig: {
     path: string;
     renderer: string;
@@ -33,11 +41,17 @@ export class AboutUsTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.isFullListDisplayed = false;
+
     this.lottieConfig = {
       path: 'assets/maps-and-charts.json',
       renderer: 'svg',
       autoplay: true,
       loop: true
     };
+  }
+
+  showFullList() {
+    this.isFullListDisplayed = true;
   }
 }

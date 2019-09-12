@@ -6,22 +6,64 @@
       </div>
       <div class="text">
         <h1>What do we build?</h1>
-        <p>We craft software that optimizes your most important business systems.  We'll innovate together to give you a serious edge in your industry.</p>
-        <div class="bullets">
-          <div class="bullet">
-            <img src="assets/map.svg"/>
-            <span>Interactive Maps</span>
+        <div class="page-one" *ngIf="!isFullListDisplayed">
+          <p>We craft software that optimizes your most important business systems.  We'll innovate together to give you a serious edge in your industry.</p>
+          <div class="bullets">
+            <div class="bullet">
+              <img src="assets/map.svg"/>
+              <span>Interactive Maps</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-bar.svg"/>
+              <span>Analytics Dashboards</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-gantt.svg"/>
+              <span>Management Tools</span>
+            </div>
           </div>
-          <div class="bullet">
-            <img src="assets/chart-bar.svg"/>
-            <span>Analytics Dashboards</span>
-          </div>
-          <div class="bullet">
-            <img src="assets/chart-gantt.svg"/>
-            <span>Management Tools</span>
+          <button type="button" (click)="showFullList()">See popular projects</button>
+        </div>
+        <div class="page-two" *ngIf="isFullListDisplayed">
+          <div class="bullets">
+            <div class="bullet">
+              <img src="assets/map.svg"/>
+              <span>Interactive Maps</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-bar.svg"/>
+              <span>Analytics Dashboards</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-gantt.svg"/>
+              <span>Management Tools</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/map.svg"/>
+              <span>Interactive Maps</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-bar.svg"/>
+              <span>Analytics Dashboards</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-gantt.svg"/>
+              <span>Management Tools</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/map.svg"/>
+              <span>Interactive Maps</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-bar.svg"/>
+              <span>Analytics Dashboards</span>
+            </div>
+            <div class="bullet">
+              <img src="assets/chart-gantt.svg"/>
+              <span>Management Tools</span>
+            </div>
           </div>
         </div>
-        <button type="button">See popular projects</button>
       </div>
     </div>
   </div>
