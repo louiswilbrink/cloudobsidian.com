@@ -5,10 +5,10 @@
   <co-about-us-one></co-about-us-one>
   <co-about-us-two></co-about-us-two>
   <co-about-us-three></co-about-us-three>
-  <co-process-one></co-process-one>
-  <co-process-two></co-process-two>
-  <co-process-three></co-process-three>
-  <co-services-one></co-services-one>
-  <co-services-two></co-services-two>
-  <co-services-three></co-services-three>
+  <co-process-one *ngIf="!isMobile"></co-process-one>
+  <co-process-two *ngIf="!isMobile"></co-process-two>
+  <co-process-three *ngIf="!isMobile"></co-process-three>
+  <co-services-one *ngIf="!isMobile"></co-services-one>
+  <co-services-two *ngIf="!isMobile"></co-services-two>
+  <co-services-three *ngIf="!isMobile"></co-services-three>
 </div>

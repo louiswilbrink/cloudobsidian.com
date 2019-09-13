@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
     start: number,
     end: number
   }[];
+  
+  isMobile: boolean;
 
   constructor(private window: Window) { }
 
@@ -32,6 +34,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isMobile = this.checkMedia().matches;
+
+    // this.checkMedia().addListener(function (this) {
+    //  this.isMobile = this.window.matchMedia('(max-width: 414px)').matches;
+    // });
+
     this.configSlides();
   }
 }

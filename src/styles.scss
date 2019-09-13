@@ -10,14 +10,19 @@ $widescreen: 1280px;
 
 // 414x736 (Plus sized phones)
 $small: "only screen and (min-width: 415px) {}";
+
 // 768x1024px (Portrait tablets)
 $medium: "only screen and (min-width: 769px) {}";
+
 // 1280x900px (MacBook 12")
 $large: "only screen and (min-width: 1281px) {}";
+
 // 1440x900px (MacBook Pro 15")
 $larger: "only screen and (min-width: 1441px) {}";
+
 // 1680x1050px (MacBook Pro 15" Hi Res)
 $wide: "only screen and (min-width: 1681px) {}";
+
 // 1920x1080px (Desktop Monitors)
 $ultra-wide: "only screen and (min-width: 1921px) {}";
 
