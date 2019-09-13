@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isMobile = this.checkMedia().matches;
+    this.isMobile = this.window.matchMedia('(max-width: 414px)').matches;
 
     // this.checkMedia().addListener(function (this) {
     //  this.isMobile = this.window.matchMedia('(max-width: 414px)').matches;
