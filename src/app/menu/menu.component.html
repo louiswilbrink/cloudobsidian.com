@@ -1,6 +1,4 @@
-<div id="menu" 
-  (click)="toggleMenu()" 
-  [@expandCollapse]="isOpen ? 'expand' : 'collapse'">
+<div id="menu" [@expandCollapse]="isOpen ? 'expand' : 'collapse'">
   <div class="background">
     <div class="links">
       <div class="link">Home</div>
@@ -10,3 +8,4 @@
     </div>
   </div>
 </div>
+<span class="icon" (click)="toggleMenu()">x</span>

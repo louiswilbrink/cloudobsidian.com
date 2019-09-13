@@ -16,7 +16,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       state(
         'collapse', 
         style({ 
-          transform: 'translateY(-90vh)'
+          transform: 'translateY(-100vh)'
         })
       ),
       transition(

@@ -7,7 +7,7 @@
   bottom: 0;
   left: 0;
   z-index: 20;
-  transform: translateY(-90vh);
+  transform: translateY(-100vh);
 
   .background{
     background-color: $dark-gray;
@@ -24,4 +24,13 @@
       }
     }
   }
+}
+
+.icon {
+  position: fixed;
+  font-size: 40px;
+  color: $black;
+  top: 0;
+  left: 0;
+  z-index: 25;
 }
