@@ -1,12 +1,27 @@
 @import '../../styles';
 
-#menusvg {
-  width: 140px;
-  height: 140px;
-  overflow: visible;
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  transform: translateY(-90vh);
 
-  .top{
-    fill: $dark-gray;
+  .background{
+    background-color: $dark-gray;
+    height: 100%;
+    width: 100%;
+
+    .links {
+      padding-top: 20vh;
+
+      .link {
+        font-size: 24px;
+        color: $white;
+        text-align: center;
+      }
+    }
   }
 }
-
