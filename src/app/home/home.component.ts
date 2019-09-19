@@ -33,13 +33,22 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  setMediaBehavior() {
+    let matchMedia = this.window.matchMedia('(max-width: 414px)');
+
+    let setIsMobile = function (event) {
+      this.isMobile = event.matches;
+    }
+
+    let setIsMobileBinded = setIsMobile.bind(this);
+
+    this.isMobile = matchMedia.matches;
+
+    matchMedia.addListener(setIsMobileBinded);
+  }
+
   ngOnInit() {
-    this.isMobile = this.window.matchMedia('(max-width: 414px)').matches;
-
-    // this.checkMedia().addListener(function (this) {
-    //  this.isMobile = this.window.matchMedia('(max-width: 414px)').matches;
-    // });
-
+    this.setMediaBehavior();
     this.configSlides();
   }
 }
