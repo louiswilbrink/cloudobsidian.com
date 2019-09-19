@@ -27,12 +27,14 @@
     }
 
     .links {
-      padding-top: 20vh;
+      padding-top: 11vh;
 
       .link {
         font-size: 24px;
         color: $white;
         text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
     }
   }
