@@ -6,13 +6,25 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 20;
+  z-index: 25;
   transform: translateY(-100vh);
 
   .background{
     background-color: $dark-gray;
     height: 100%;
     width: 100%;
+
+    .close {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
 
     .links {
       padding-top: 20vh;
@@ -28,9 +40,16 @@
 
 .icon {
   position: fixed;
-  font-size: 40px;
-  color: $black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   top: 0;
   left: 0;
-  z-index: 25;
+  z-index: 20;
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
 }
