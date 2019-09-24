@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Components
 import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [{
@@ -11,6 +12,9 @@ const routes: Routes = [{
 }, {
   path: 'menu',
   component: MenuComponent
+}, {
+  path: 'about-us',
+  component: AboutUsComponent
 }, {
   path: '',
   redirectTo: '/', 

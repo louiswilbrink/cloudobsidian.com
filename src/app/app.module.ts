@@ -24,6 +24,7 @@ import { LeadingBarComponent } from './leading-bar/leading-bar.component';
 import { HeaderComponent } from './header/header.component';
 
 import { WindowRefService } from './window-ref.service';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { WindowRefService } from './window-ref.service';
     ScrollIntoViewDirective,
     LogoComponent,
     LeadingBarComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

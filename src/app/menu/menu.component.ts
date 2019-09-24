@@ -21,7 +21,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       ),
       transition(
         'void => expand, expand => collapse, collapse => expand', 
-        animate('200ms ease-in-out')
+        animate('500ms ease-in-out')
       ),
     ])
   ]
