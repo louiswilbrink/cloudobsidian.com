@@ -26,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import { WindowRefService } from './window-ref.service';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProcessComponent } from './process/process.component';
+import { ServicesAndIntegrationComponent } from './services-and-integration/services-and-integration.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ProcessComponent } from './process/process.component';
     LeadingBarComponent,
     HeaderComponent,
     AboutUsComponent,
-    ProcessComponent
+    ProcessComponent,
+    ServicesAndIntegrationComponent
   ],
   imports: [
     BrowserModule,
