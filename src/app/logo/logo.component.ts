@@ -1,14 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
+import { WindowRefService } from '../window-ref.service';
+
 @Component({
   selector: 'co-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss'],
-  providers: [{ 
-    provide: Window, 
-    useValue: window 
-  }],
 	animations: [
     trigger('fadeInOut', [
       state(
@@ -28,8 +26,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class LogoComponent implements OnInit {
   @Input() start: number;
+
+  windowRef: any;
   
-  constructor(private window: Window) { }
+  constructor(windowRefService: WindowRefService) {
+    this.windowRef = windowRefService.nativeWindow;
+  }
 
   ngOnInit() {
   }

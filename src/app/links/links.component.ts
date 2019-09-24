@@ -2,14 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
 
+import { WindowRefService } from '../window-ref.service';
+
 @Component({
   selector: 'co-links',
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.scss'],
-  providers: [{ 
-    provide: Window, 
-    useValue: window 
-  }],
   animations: [
     trigger('linkActivation', [
       state(
@@ -39,10 +37,14 @@ export class LinksComponent implements OnInit {
     end: number
   }[];
 
+  windowRef: any;
+
   constructor(
-    private window: Window,
+    windowRefService: WindowRefService,
     route: ActivatedRoute
-  ) { }
+  ) {
+    this.windowRef = windowRefService.nativeWindow;
+  }
 
   ngOnInit() {
   }

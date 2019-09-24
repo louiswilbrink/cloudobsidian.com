@@ -2,24 +2,24 @@
   <span class="first">
     <div><a [routerLink]="['']" fragment="home">HOME</a></div>
     <div class="active" 
-      [@linkActivation]="window.scrollY >= slides[0].start && window.scrollY < slides[0].end ? 'activate' : 'deactivate'"></div>
+      [@linkActivation]="windowRef.scrollY >= slides[0].start && windowRef.scrollY < slides[0].end ? 'activate' : 'deactivate'"></div>
   </span>
   <span>
     <div><a [routerLink]="['']" fragment="about-us">ABOUT US</a></div>
     <div class="active" 
-      [@linkActivation]="window.scrollY >= slides[1].start && window.scrollY < slides[3].end ? 'activate' : 'deactivate'">
+      [@linkActivation]="windowRef.scrollY >= slides[1].start && windowRef.scrollY < slides[3].end ? 'activate' : 'deactivate'">
     </div>
   </span>
   <span>
     <div><a [routerLink]="['']" fragment="process">PROCESS</a></div>
     <div class="active" 
-      [@linkActivation]="window.scrollY >= slides[4].start && window.scrollY < slides[6].end ? 'activate' : 'deactivate'">
+      [@linkActivation]="windowRef.scrollY >= slides[4].start && windowRef.scrollY < slides[6].end ? 'activate' : 'deactivate'">
     </div>
   </span>
   <span>
     <div><a [routerLink]="['']" fragment="services">SERVICES & PRICING</a></div>
     <div class="active" 
-      [@linkActivation]="window.scrollY >= slides[7].start ? 'activate' : 'deactivate'">
+      [@linkActivation]="windowRef.scrollY >= slides[7].start ? 'activate' : 'deactivate'">
     </div>
   </span>
 </div>

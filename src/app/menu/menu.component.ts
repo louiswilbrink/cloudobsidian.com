@@ -35,7 +35,7 @@ export class MenuComponent implements OnInit {
     this.isOpen = false;
   }
 
-  toggleMenu(isOpen) {
+  toggleMenu() {
     this.isOpen = !this.isOpen;
   }
 }

@@ -23,6 +23,8 @@ import { LogoComponent } from './logo/logo.component';
 import { LeadingBarComponent } from './leading-bar/leading-bar.component';
 import { HeaderComponent } from './header/header.component';
 
+import { WindowRefService } from './window-ref.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +52,7 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     LottieAnimationViewModule.forRoot()
   ],
+  providers: [WindowRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
