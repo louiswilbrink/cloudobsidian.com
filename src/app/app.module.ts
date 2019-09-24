@@ -25,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { WindowRefService } from './window-ref.service';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ProcessComponent } from './process/process.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     LogoComponent,
     LeadingBarComponent,
     HeaderComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ProcessComponent
   ],
   imports: [
     BrowserModule,

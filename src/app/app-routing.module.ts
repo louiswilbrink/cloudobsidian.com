@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ProcessComponent } from './process/process.component';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [{
@@ -15,6 +16,9 @@ const routes: Routes = [{
 }, {
   path: 'about-us',
   component: AboutUsComponent
+}, {
+  path: 'process',
+  component: ProcessComponent
 }, {
   path: '',
   redirectTo: '/', 
