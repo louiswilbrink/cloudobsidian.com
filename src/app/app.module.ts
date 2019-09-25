@@ -26,7 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import { WindowRefService } from './window-ref.service';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProcessComponent } from './process/process.component';
-import { ServicesAndIntegrationComponent } from './services-and-integration/services-and-integration.component';
+import { ServicesAndPricingComponent } from './services-and-pricing/services-and-pricing.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,7 @@ import { ServicesAndIntegrationComponent } from './services-and-integration/serv
     HeaderComponent,
     AboutUsComponent,
     ProcessComponent,
-    ServicesAndIntegrationComponent
+    ServicesAndPricingComponent
   ],
   imports: [
     BrowserModule,
