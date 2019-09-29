@@ -28,6 +28,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ProcessComponent } from './process/process.component';
 import { ServicesAndPricingComponent } from './services-and-pricing/services-and-pricing.component';
 import { MobileLogoComponent } from './mobile-logo/mobile-logo.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MobileLogoComponent } from './mobile-logo/mobile-logo.component';
     AboutUsComponent,
     ProcessComponent,
     ServicesAndPricingComponent,
-    MobileLogoComponent
+    MobileLogoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

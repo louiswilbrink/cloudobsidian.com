@@ -1,0 +1,24 @@
+@import '../../styles';
+
+.footer {
+  background-color: $dark-gray;
+  padding: 20px;
+  margin-top: 80px;
+
+  div {
+    color: $white;
+    font-family: 'Varela', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &.first {
+      margin-top: 0px;
+    }
+
+    &.last {
+      margin-bottom: 0px;
+    }
+  }
+}
