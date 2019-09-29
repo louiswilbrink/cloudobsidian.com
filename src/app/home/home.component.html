@@ -1,5 +1,6 @@
 <div class="home">
   <co-header [slides]="slides"></co-header>
+  <co-mobile-logo *ngIf="isMobile"></co-mobile-logo>
   <co-menu *ngIf="isMobile"></co-menu>
   <co-leading-bar></co-leading-bar>
   <co-home-slide></co-home-slide>

@@ -1,0 +1,16 @@
+@import '../../styles';
+
+.mobile-logo {
+  position: fixed;
+  opacity: 1;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  background-color: $white;
+  z-index: 20;
+
+  img {
+    width: 165px;
+  }
+}

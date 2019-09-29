@@ -27,6 +27,7 @@ import { WindowRefService } from './window-ref.service';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProcessComponent } from './process/process.component';
 import { ServicesAndPricingComponent } from './services-and-pricing/services-and-pricing.component';
+import { MobileLogoComponent } from './mobile-logo/mobile-logo.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ServicesAndPricingComponent } from './services-and-pricing/services-and
     HeaderComponent,
     AboutUsComponent,
     ProcessComponent,
-    ServicesAndPricingComponent
+    ServicesAndPricingComponent,
+    MobileLogoComponent
   ],
   imports: [
     BrowserModule,
