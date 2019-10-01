@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { angular } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { WindowRefService } from '../window-ref.service';
@@ -25,7 +26,7 @@ import { WindowRefService } from '../window-ref.service';
   ]
 })
 export class MobileLogoComponent implements OnInit {
-  start: number;
+  @Input() start: number;
   windowRef: any;
 
   constructor(windowRefService: WindowRefService) {
@@ -33,6 +34,6 @@ export class MobileLogoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.start = Math.floor(this.windowRef.innerHeight / 2);
+    this.start = typeof this.start !== 'undefined' ? this.start : Math.floor(this.windowRef.innerHeight / 2);
   }
 }
