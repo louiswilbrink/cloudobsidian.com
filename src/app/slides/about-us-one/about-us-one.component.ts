@@ -1,28 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'co-about-us-one',
   templateUrl: './about-us-one.component.html',
-  styleUrls: ['./about-us-one.component.scss'],
-	animations: [
-    trigger('fadeInOut', [
-      state(
-        'fadeIn', 
-        style({ opacity: '1' })
-      ),
-      state(
-        'fadeOut', 
-        style({ opacity: '0' })
-      ),
-      transition(
-        'void => fadeIn, fadeIn => fadeOut, fadeOut => fadeIn', 
-        animate('200ms 200ms ease-out')
-      ),
-    ])
-  ]
+  styleUrls: ['./about-us-one.component.scss']
 })
 export class AboutUsOneComponent implements OnInit {
+  @Input() isMobile: boolean = false;
+
   lottieConfig: {
     path: string;
     renderer: string;
@@ -30,7 +17,15 @@ export class AboutUsOneComponent implements OnInit {
     loop: boolean;
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  navigate() {
+    if (this.isMobile) {
+      this.router.navigate(['/process']);
+    } else {
+      this.router.navigate([''], { fragment: 'process' });
+    }
+  }
 
   ngOnInit() {
     this.lottieConfig = {
