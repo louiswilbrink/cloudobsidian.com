@@ -22,9 +22,7 @@
             <span>Services &amp; Integration</span>
           </div>
         </div>
-        <a [routerLink]="['']" fragment="services">
-          <button type="button">See Services &amp; Pricing</button>
-        </a>
+        <button type="button" (click)="navigate($event)">See Services &amp; Pricing</button>
       </div>
     </div>
   </div>

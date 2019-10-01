@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'co-about-us-one',
