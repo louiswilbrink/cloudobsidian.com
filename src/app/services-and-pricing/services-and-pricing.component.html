@@ -1,7 +1,11 @@
 <div class="services-and-pricing">
   <co-menu></co-menu>
   <co-mobile-logo *ngIf="isMobile" [start]="0"></co-mobile-logo>
+  <div class="page-title">
+    <h2>Services & Pricing</h2>
+  </div>
   <co-services-one></co-services-one>
   <co-services-two></co-services-two>
   <co-services-three></co-services-three>
+  <co-footer *ngIf="isMobile"></co-footer>
 </div>

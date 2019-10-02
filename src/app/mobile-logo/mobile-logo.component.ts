@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { angular } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { WindowRefService } from '../window-ref.service';

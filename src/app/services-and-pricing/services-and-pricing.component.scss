@@ -1,4 +1,13 @@
 @import '../../styles';
 
 .services-and-pricing {
+  width: 100%;
+
+  .page-title {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-transform: uppercase;
+  }
 }

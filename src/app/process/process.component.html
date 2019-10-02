@@ -1,7 +1,11 @@
 <div class="process">
   <co-menu></co-menu>
   <co-mobile-logo *ngIf="isMobile" [start]="0"></co-mobile-logo>
+  <div class="page-title">
+    <h2>Our Process</h2>
+  </div>
   <co-process-one></co-process-one>
   <co-process-two></co-process-two>
   <co-process-three></co-process-three>
+  <co-footer *ngIf="isMobile"></co-footer>
 </div>
