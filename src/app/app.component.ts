@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
+
+import { environment } from '../environments/environment';
+
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cloud-obsidian';
+
+  constructor(public router: Router) {
+    if (environment.production) {
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          ga('set', 'page', event.urlAfterRedirects);
+          ga('send', 'pageview');
+        }
+      });
+    }
+  }
 }
