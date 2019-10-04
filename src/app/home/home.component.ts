@@ -22,15 +22,13 @@ export class HomeComponent implements OnInit {
 
   configSlides() {
     const slideTotal = 10;
-    const windowRef = this.windowRef;
+    const screenHeight = this.windowRef.innerHeight;
+    const screenDelta = Math.floor(screenHeight / 3);
 
-    // For 10 slides with window height 100px:
-    // start slides at scroll position [0, 100, 200, ..],
-    // end slides at scroll position [70, 170, 270, ..]
     this.slides = [...Array(slideTotal)].map((x, i) => {
       return {
-        start: windowRef.innerHeight * i,
-        end: windowRef.innerHeight * (i + 1)
+        start: (screenHeight * i) - screenDelta,
+        end: (screenHeight * (i + 1)) -screenDelta 
       };
     });
   }
