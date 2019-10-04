@@ -11,25 +11,26 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         'slideUp',
         style({
           opacity: 1,
-          transform: 'translateY(40px)'
+          transform: 'translateY(0px)'
         })
       ),
       state(
         'slideDown',
         style({
           opacity: 0,
-          transform: 'translateY(80px)'
+          transform: 'translateY(200px)'
         })
       ),
       transition(
         'void => slideUp, slideUp => slideDown, slideDown => slideUp',
-        animate('200ms ease-out')
+        animate('300ms ease-out')
       )
     ])
   ]
 })
 export class AboutUsTwoComponent implements OnInit {
   isFullListDisplayed: boolean;
+  buttonText: string;
 
   lottieConfig: {
     path: string;
@@ -42,6 +43,7 @@ export class AboutUsTwoComponent implements OnInit {
 
   ngOnInit() {
     this.isFullListDisplayed = false;
+    this.buttonText = 'See more projects';
 
     this.lottieConfig = {
       path: 'assets/maps-and-charts.json',
@@ -52,6 +54,7 @@ export class AboutUsTwoComponent implements OnInit {
   }
 
   showFullList() {
-    this.isFullListDisplayed = true;
+    this.isFullListDisplayed = !this.isFullListDisplayed;
+    this.buttonText = this.isFullListDisplayed ? 'Back' : 'See more projects';
   }
 }

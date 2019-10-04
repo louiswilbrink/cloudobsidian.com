@@ -6,64 +6,74 @@
       </div>
       <div class="text">
         <h1>What do we build?</h1>
-        <div class="page-one" *ngIf="!isFullListDisplayed">
-          <p>We craft software that optimizes your most important business systems.  We'll innovate together to give you a serious edge in your industry.</p>
-          <div class="bullets">
-            <div class="bullet">
-              <img src="assets/map.svg"/>
-              <span>Interactive Maps</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-bar.svg"/>
-              <span>Analytics Dashboards</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-gantt.svg"/>
-              <span>Management Tools</span>
-            </div>
-          </div>
-          <button type="button" (click)="showFullList()">See popular projects</button>
-        </div>
-        <div class="page-two" *ngIf="isFullListDisplayed">
-          <div class="bullets">
-            <div class="bullet">
-              <img src="assets/map.svg"/>
-              <span>Interactive Maps</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-bar.svg"/>
-              <span>Analytics Dashboards</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-gantt.svg"/>
-              <span>Management Tools</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/map.svg"/>
-              <span>Interactive Maps</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-bar.svg"/>
-              <span>Analytics Dashboards</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-gantt.svg"/>
-              <span>Management Tools</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/map.svg"/>
-              <span>Interactive Maps</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-bar.svg"/>
-              <span>Analytics Dashboards</span>
-            </div>
-            <div class="bullet">
-              <img src="assets/chart-gantt.svg"/>
-              <span>Management Tools</span>
+        <div class="pages">
+          <div class="page-one" 
+            [@slideUpDown]="!isFullListDisplayed ? 'slideUp' : 'slideDown'">
+            <p>We craft software that optimizes your most important business systems.  We'll innovate together to give you a serious edge in your industry.</p>
+            <div class="bullets">
+              <div class="bullet">
+                <img src="assets/map.svg"/>
+                <span>Interactive Maps</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-bar.svg"/>
+                <span>Analytics Dashboards</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-gantt.svg"/>
+                <span>Management Tools</span>
+              </div>
             </div>
           </div>
+          <div class="page-two" 
+            [@slideUpDown]="isFullListDisplayed ? 'slideUp' : 'slideDown'">
+            <div class="bullets">
+              <div class="bullet">
+                <img src="assets/map.svg"/>
+                <span>Interactive Maps</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-bar.svg"/>
+                <span>Analytics Dashboards</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-gantt.svg"/>
+                <span>Management Tools</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/map.svg"/>
+                <span>Inventory Automation</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/map.svg"/>
+                <span>Sales Pipelines</span>
+              </div>
+            </div>
+            <div class="bullets column-2">
+              <div class="bullet">
+                <img src="assets/chart-bar.svg"/>
+                <span>Accounting Tools</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-bar.svg"/>
+                <span>Custom CMS & CRMs</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-gantt.svg"/>
+                <span>Marketing Dashboards</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-gantt.svg"/>
+                <span>Hiring Portals</span>
+              </div>
+              <div class="bullet">
+                <img src="assets/chart-gantt.svg"/>
+                <span>Hiring Portals</span>
+              </div>
+            </div>
+          </div>
         </div>
+        <button type="button" (click)="showFullList()">{{ buttonText }}</button>
       </div>
     </div>
   </div>

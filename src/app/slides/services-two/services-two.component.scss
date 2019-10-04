@@ -230,11 +230,27 @@
         margin-right: auto;
         padding-top: 20px;
 
-        .page-one {
-        }
+        .pages {
+          height: 215px;
+          position: relative;
+          overflow: hidden;
 
-        .page-two {
-          margin-top: 14px;
+          @media #{$small} {
+            height: 200px;
+          }
+
+          .page-one {
+            position: absolute;
+          }
+
+          .page-two {
+            position: absolute;
+            margin-top: 15px;
+
+            @media #{$small} {
+              margin-top: 12px;
+            }
+          }
         }
 
         @media #{$small} {
@@ -246,7 +262,7 @@
         @media #{$medium} {
           max-width: none;
           display: inline-block;
-          width: 350px;
+          width: 440px;
           vertical-align: top;
           margin-left: 20px;
           margin-right: 0px;
@@ -342,6 +358,15 @@
         }
 
         .bullets {
+          display: block;
+
+          @media #{$small} {
+            display: inline-block;
+
+            &.column-2 {
+              margin-left: 25px;
+            }
+          }
           
           .bullet {
             display: flex;
@@ -349,7 +374,11 @@
             flex-wrap: nowrap;
             justify-content: flex-start;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+
+            @media #{$small} {
+              margin-bottom: 15px;
+            }
 
             img {
               margin-right: 10px;
