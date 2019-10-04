@@ -36,15 +36,14 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class AboutUsTwoComponent implements OnInit {
-  isMobile: boolean;
-  isFullListDisplayed: boolean;
-  buttonText: string[];
+  @Input() isMobile: boolean;
+  index: number;
   state: {
     pageOne: boolean;
     pageTwo: boolean;
     pageTwoScrolled: boolean;
   }[];
-  index: number;
+  buttonText: string[];
 
   lottieConfig: {
     path: string;
@@ -56,21 +55,31 @@ export class AboutUsTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.isFullListDisplayed = false;
-
-    this.state = [
-      { pageOne: true, pageTwo: false, pageTwoScrolled: false },
-      { pageOne: false, pageTwo: true, pageTwoScrolled: false },
-      { pageOne: false, pageTwo: false, pageTwoScrolled: true }
-    ];
-
-    this.buttonText = [
-      'See more projects', 
-      'More', 
-      'Back'
-    ];
-
     this.index = 0;
+
+    if (this.isMobile) {
+      this.state = [
+        { pageOne: true, pageTwo: false, pageTwoScrolled: false },
+        { pageOne: false, pageTwo: true, pageTwoScrolled: false },
+        { pageOne: false, pageTwo: false, pageTwoScrolled: true }
+      ];
+
+      this.buttonText = [
+        'See more projects', 
+        'More', 
+        'Back'
+      ];
+    } else {
+      this.state = [
+        { pageOne: true, pageTwo: false, pageTwoScrolled: false },
+        { pageOne: false, pageTwo: true, pageTwoScrolled: false },
+      ];
+
+      this.buttonText = [
+        'See more projects', 
+        'Back'
+      ];
+    }
 
     this.lottieConfig = {
       path: 'assets/maps-and-charts.json',
@@ -81,7 +90,7 @@ export class AboutUsTwoComponent implements OnInit {
   }
 
   transitionState() {
-    if (this.index === 2) {
+    if (this.index === (this.state.length - 1)) {
       this.index = 0;
     } else {
       this.index++;
