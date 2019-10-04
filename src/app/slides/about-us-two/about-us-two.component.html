@@ -8,7 +8,7 @@
         <h1>What do we build?</h1>
         <div class="pages">
           <div class="page-one" 
-            [@slideUpDown]="!isFullListDisplayed ? 'slideUp' : 'slideDown'">
+            [@slideUpDown]="state[index].pageOne ? 'slideUp' : 'slideDown'">
             <p>We craft software that optimizes your most important business systems.  We'll innovate together to give you a serious edge in your industry.</p>
             <div class="bullets">
               <div class="bullet">
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="page-two" 
-            [@slideUpDown]="isFullListDisplayed ? 'slideUp' : 'slideDown'">
+            [@slideUpDown]="state[index].pageTwoScrolled ? 'slideUpMore' : state[index].pageTwo ? 'slideUp' : 'slideDown'">
             <div class="bullets">
               <div class="bullet">
                 <img src="assets/map.svg"/>
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-        <button type="button" (click)="showFullList()">{{ buttonText }}</button>
+        <button type="button" (click)="transitionState()">{{ buttonText[index] }}</button>
       </div>
     </div>
   </div>

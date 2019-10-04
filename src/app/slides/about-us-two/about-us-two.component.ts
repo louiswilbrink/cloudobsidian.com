@@ -8,6 +8,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 	animations: [
     trigger('slideUpDown', [
       state(
+        'slideUpMore',
+        style({
+          opacity: 1,
+          transform: 'translateY(-200px)'
+        })
+      ),
+      state(
         'slideUp',
         style({
           opacity: 1,
@@ -22,15 +29,22 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         })
       ),
       transition(
-        'void => slideUp, slideUp => slideDown, slideDown => slideUp',
+        'void => slideUp, slideUp => slideDown, slideDown => slideUp, slideUp => slideUpMore, slideUpMore => void',
         animate('300ms ease-out')
       )
     ])
   ]
 })
 export class AboutUsTwoComponent implements OnInit {
+  isMobile: boolean;
   isFullListDisplayed: boolean;
-  buttonText: string;
+  buttonText: string[];
+  state: {
+    pageOne: boolean;
+    pageTwo: boolean;
+    pageTwoScrolled: boolean;
+  }[];
+  index: number;
 
   lottieConfig: {
     path: string;
@@ -43,7 +57,20 @@ export class AboutUsTwoComponent implements OnInit {
 
   ngOnInit() {
     this.isFullListDisplayed = false;
-    this.buttonText = 'See more projects';
+
+    this.state = [
+      { pageOne: true, pageTwo: false, pageTwoScrolled: false },
+      { pageOne: false, pageTwo: true, pageTwoScrolled: false },
+      { pageOne: false, pageTwo: false, pageTwoScrolled: true }
+    ];
+
+    this.buttonText = [
+      'See more projects', 
+      'More', 
+      'Back'
+    ];
+
+    this.index = 0;
 
     this.lottieConfig = {
       path: 'assets/maps-and-charts.json',
@@ -53,8 +80,11 @@ export class AboutUsTwoComponent implements OnInit {
     };
   }
 
-  showFullList() {
-    this.isFullListDisplayed = !this.isFullListDisplayed;
-    this.buttonText = this.isFullListDisplayed ? 'Back' : 'See more projects';
+  transitionState() {
+    if (this.index === 2) {
+      this.index = 0;
+    } else {
+      this.index++;
+    }
   }
 }
