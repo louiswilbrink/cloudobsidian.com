@@ -13,13 +13,10 @@ export class ProcessComponent implements OnInit {
   windowRef: any;
   isMobile: boolean;
 
-  lottie: any;
-
   constructor(windowRefService: WindowRefService) {
     this.windowRef = windowRefService.nativeWindow;
 
-    this.lottie = lottie;
-    this.lottie.setLocationHref(document.location.href);
+    (lottie as any).setLocationHref(document.location.href);
   }
 
   setMediaBehavior() {
