@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { WindowRefService } from '../window-ref.service';
 
+import lottie from 'lottie-web';
+
 @Component({
   selector: 'co-home',
   templateUrl: './home.component.html',
@@ -16,8 +18,13 @@ export class HomeComponent implements OnInit {
   windowRef: any;
   isMobile: boolean;
 
+  lottie: any;
+
   constructor(windowRefService: WindowRefService) {
     this.windowRef = windowRefService.nativeWindow;
+
+    this.lottie = lottie;
+    this.lottie.setLocationHref(document.location.href);
   }
 
   configSlides() {

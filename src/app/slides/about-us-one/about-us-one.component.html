@@ -2,7 +2,7 @@
   <div class="slide first">
     <div class="content">
       <div class="animation">
-        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
+        <lottie-animation-view [options]="lottieConfig" (animCreated)="handleAnimation($event)"></lottie-animation-view>
       </div>
       <div class="text">
         <h1>Fluid ideas to solid assets</h1>

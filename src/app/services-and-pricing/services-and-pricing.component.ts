@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { WindowRefService } from '../window-ref.service';
 
+import lottie from 'lottie-web';
+
 @Component({
   selector: 'app-services-and-pricing',
   templateUrl: './services-and-pricing.component.html',
@@ -11,8 +13,13 @@ export class ServicesAndPricingComponent implements OnInit {
   windowRef: any;
   isMobile: boolean;
 
+  lottie: any;
+
   constructor(windowRefService: WindowRefService) {
     this.windowRef = windowRefService.nativeWindow;
+
+    this.lottie = lottie;
+    this.lottie.setLocationHref(document.location.href);
   }
 
   setMediaBehavior() {
