@@ -398,10 +398,7 @@
           height: 40px;
           background-color: $primary;
           color: $white;
-
-          &:hover {
-            background-color: $accent;
-          }
+          border: none;
 
           @media #{$medium} {
             width: 250px;
