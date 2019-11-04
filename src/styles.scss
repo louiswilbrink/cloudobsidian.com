@@ -9,106 +9,106 @@ $landscape: 1024px;
 $widescreen: 1280px;
 
 // 414x736 (Plus sized phones)
-$small: "only screen and (min-width: 415px) {}";
+$small: "only screen and (min-width: 415px)";
 
 // 768x1024px (Portrait tablets)
-$medium: "only screen and (min-width: 769px) {}";
+$medium: "only screen and (min-width: 769px)";
 
 // 1280x900px (MacBook 12")
-$large: "only screen and (min-width: 1281px) {}";
+$large: "only screen and (min-width: 1281px)";
 
 // 1440x900px (MacBook Pro 15")
-$larger: "only screen and (min-width: 1441px) {}";
+$larger: "only screen and (min-width: 1441px)";
 
 // 1680x1050px (MacBook Pro 15" Hi Res)
-$wide: "only screen and (min-width: 1681px) {}";
+$wide: "only screen and (min-width: 1681px)";
 
 // 1920x1080px (Desktop Monitors)
-$ultra-wide: "only screen and (min-width: 1921px) {}";
+$ultra-wide: "only screen and (min-width: 1921px)";
 
-$iphone: "only screen 
-  and (device-width : 375px) 
-  and (device-height : 667px) 
-  and (-webkit-device-pixel-ratio : 2)";
+$iphone: "only screen and \
+  (device-width : 375px) and \
+  (device-height : 667px) and \
+  (-webkit-device-pixel-ratio : 2)";
 
-$iphone-landscape: "only screen 
-  and (device-width : 375px) 
-  and (device-height : 667px) 
-  and (-webkit-device-pixel-ratio : 2)";
+$iphone-landscape: "only screen and \
+  (device-width : 375px) and \
+  (device-height : 667px) and \
+  (-webkit-device-pixel-ratio : 2)";
 
-$iphone-plus: "only screen 
-  and (device-width : 414px) 
-  and (device-height : 736px) 
-  and (-webkit-device-pixel-ratio : 3)";
+$iphone-plus: "only screen and \
+  (device-width : 414px) and \
+  (device-height : 736px) and \
+  (-webkit-device-pixel-ratio : 3)";
 
-$iphone-plus-landscape: "only screen 
-  and (device-width : 414px) 
-  and (device-height : 736px) 
-  and (-webkit-device-pixel-ratio : 3)";
+$iphone-plus-landscape: "only screen and \
+  (device-width : 414px) and \
+  (device-height : 736px) and \
+  (-webkit-device-pixel-ratio : 3)";
 
-$iphone-x: "only screen 
-  and (device-width : 375px) 
-  and (device-height : 812px) 
-  and (-webkit-device-pixel-ratio : 3)";
+$iphone-x: "only screen and \
+  (device-width : 375px) and \
+  (device-height : 812px) and \
+  (-webkit-device-pixel-ratio : 3)";
 
-$iphone-x-landscape: "only screen 
-  and (device-width : 375px) 
-  and (device-height : 812px) 
-  and (-webkit-device-pixel-ratio : 3) 
-  and (orientation : landscape)";
+$iphone-x-landscape: "only screen and \
+  (device-width : 375px) and \
+  (device-height : 812px) and \
+  (-webkit-device-pixel-ratio : 3) and \
+  (orientation : landscape)";
 
-$iphone-xr: "only screen
-  and (device-width : 414px)
-  and (device-height : 896px)
-  and (-webkit-device-pixel-ratio : 2)";
+$iphone-xr: "only screen and \
+  (device-width : 414px) and \
+  (device-height : 896px) and \
+  (-webkit-device-pixel-ratio : 2)";
 
-$iphone-xr-landscape: "only screen 
-  and (device-width : 414px)
-  and (device-height : 896px)
-  and (-webkit-device-pixel-ratio : 2)
-  and (orientation : landscape)";
+$iphone-xr-landscape: "only screen and \
+  (device-width : 414px) and \
+  (device-height : 896px) and \
+  (-webkit-device-pixel-ratio : 2) and \
+  (orientation : landscape)";
 
-$iphone-xs: "only screen
-  and (device-width : 375px)
-  and (device-height : 812px)
-  and (-webkit-device-pixel-ratio : 3)";
+$iphone-xs: "only screen and \
+  (device-width : 375px) and \
+  (device-height : 812px) and \
+  (-webkit-device-pixel-ratio : 3)";
 
-$iphone-xs-landscape: "only screen 
-  and (device-width : 375px)
-  and (device-height : 812px)
-  and (-webkit-device-pixel-ratio : 3)
-  and (orientation : landscape)";
+$iphone-xs-landscape: "only screen and \
+  (device-width : 375px) and \
+  (device-height : 812px) and \
+  (-webkit-device-pixel-ratio : 3) and \
+  (orientation : landscape)";
 
-$iphone-xs-max: "only screen
-  and (device-width : 414px)
-  and (device-height : 896px)
-  and (-webkit-device-pixel-ratio : 3)";
+$iphone-xs-max: "only screen and \
+  (device-width : 414px) and \
+  (device-height : 896px) and \
+  (-webkit-device-pixel-ratio : 3)";
 
-$iphone-xs-max-landscape: "only screen 
-  and (device-width : 414px)
-  and (device-height : 896px)
-  and (-webkit-device-pixel-ratio : 3)
-  and (orientation : landscape)";
+$iphone-xs-max-landscape: "only screen and \
+  (device-width : 414px) and \
+  (device-height : 896px) and \
+  (-webkit-device-pixel-ratio : 3) and \
+  (orientation : landscape)";
 
-$ipad: "only screen 
-  and (device-width : 768px) 
-  and (device-height : 1024px) 
-  and (orientation : portrait)";
+$ipad: "only screen and \
+  (device-width : 768px) and \
+  (device-height : 1024px) and \
+  (orientation : portrait)";
 
-$ipad-landscape: "only screen 
-  and (device-width : 768px) 
-  and (device-height : 1024px) 
-  and (orientation : landscape)";
+$ipad-landscape: "only screen and \
+  (device-width : 768px) and \
+  (device-height : 1024px) and \
+  (orientation : landscape)";
 
-$ipad-pro: "only screen 
-  and (device-width : 1024px) 
-  and (device-height : 1366px) 
-  and (orientation : portrait)";
+$ipad-pro: "only screen and \
+  (device-width : 1024px) and \
+  (device-height : 1366px) and \
+  (orientation : portrait)";
 
-$ipad-pro-landscape: "only screen 
-  and (device-width : 1024px) 
-  and (device-height : 1366px) 
-  and (orientation : landscape)";
+$ipad-pro-landscape: "only screen and \
+  (device-width : 1024px) and \
+  (device-height : 1366px) and \
+  (orientation : landscape)";
 
 /* Colors */
 $primary: #F2275A;   // Pink
