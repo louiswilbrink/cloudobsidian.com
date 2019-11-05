@@ -1,5 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'co-services-three',
@@ -22,22 +25,22 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ])
   ]
 })
-export class ServicesThreeComponent implements OnInit {
-  lottieConfig: {
-    path: string;
-    renderer: string;
-    autoplay: boolean;
-    loop: boolean;
-  }
+export class ServicesThreeComponent implements OnInit, AfterViewInit {
+  options: AnimationOptions = {
+    path: 'assets/services-and-integration.json'
+  };
 
   constructor() { }
 
   ngOnInit() {
-    this.lottieConfig = {
-      path: 'assets/services-and-integration.json',
-      renderer: 'svg',
-      autoplay: true,
-      loop: true
-    };
+  }
+
+  ngAfterViewInit() {
+  }
+
+  configReady(): void {
+  }
+
+  domLoaded(): void {
   }
 }

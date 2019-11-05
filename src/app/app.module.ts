@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LottieAnimationViewModule } from 'ng-lottie';
+import { LottieModule } from 'ngx-lottie';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +30,14 @@ import { ProcessComponent } from './process/process.component';
 import { ServicesAndPricingComponent } from './services-and-pricing/services-and-pricing.component';
 import { MobileLogoComponent } from './mobile-logo/mobile-logo.component';
 import { FooterComponent } from './footer/footer.component';
+
+import player from 'lottie-web';
+
+// Note we need a separate function as it's required
+// by the AOT compiler
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -60,7 +69,11 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    LottieAnimationViewModule.forRoot()
+    LottieAnimationViewModule.forRoot(),
+    LottieModule.forRoot({ 
+      player: playerFactory,
+      useCache: true
+    })
   ],
   providers: [WindowRefService],
   bootstrap: [AppComponent]

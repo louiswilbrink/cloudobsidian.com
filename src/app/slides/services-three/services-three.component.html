@@ -2,7 +2,11 @@
   <div class="slide last">
     <div class="content">
       <div class="animation">
-        <lottie-animation-view [options]="lottieConfig"></lottie-animation-view>
+        <ng-lottie
+          [options]="options"
+          (configReady)="configReady()"
+          (domLoaded)="domLoaded()">
+        </ng-lottie>
       </div>
       <div class="text">
         <h1>Services &amp; Integration</h1>
