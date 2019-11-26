@@ -2,7 +2,7 @@
   <co-header [slides]="slides"></co-header>
   <co-mobile-logo *ngIf="isMobile"></co-mobile-logo>
   <co-menu *ngIf="isMobile"></co-menu>
-  <co-home-slide></co-home-slide>
+  <co-home-slide *ngIf="isMobile"></co-home-slide>
   <co-about-us-one [isMobile]="isMobile"></co-about-us-one>
   <co-about-us-two [isMobile]="isMobile"></co-about-us-two>
   <co-about-us-three [isMobile]="isMobile"></co-about-us-three>

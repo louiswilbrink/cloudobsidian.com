@@ -39,6 +39,8 @@ export class LinksComponent implements OnInit {
 
   windowRef: any;
 
+  isContactUsClicked: boolean = false;
+
   constructor(
     windowRefService: WindowRefService,
     route: ActivatedRoute
@@ -47,5 +49,9 @@ export class LinksComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onContactUsClicked() {
+    this.isContactUsClicked = !this.isContactUsClicked;
   }
 }

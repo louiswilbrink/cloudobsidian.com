@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   configSlides() {
-    const slideTotal = 10;
+    const slideTotal = 9;
     const screenHeight = this.windowRef.innerHeight;
     const screenDelta = Math.floor(screenHeight / 3);
 
